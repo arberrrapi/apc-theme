@@ -1,0 +1,36 @@
+{
+    "apiVersion": 2,
+    "name": "apc/feature-block",
+    "title": "APC Feature Block",
+    "category": "apc-blocks",
+    "icon": "star-filled",
+    "description": "A feature block with icon at top and rich text description at bottom.",
+    "keywords": ["feature", "icon", "description", "content"],
+    "supports": {
+        "align": ["wide", "full"],
+        "anchor": true
+    },
+    "attributes": {
+        "iconUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "iconAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "content": {
+            "type": "string",
+            "source": "html",
+            "selector": ".feature-content",
+            "default": "<p>Add your feature description here. You can include <strong>bold text</strong>, <em>italic text</em>, and <a href='#'>links</a>.</p>"
+        },
+        "alignment": {
+            "type": "string",
+            "default": "center"
+        }
+    },
+    "textdomain": "apc-theme",
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

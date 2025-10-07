@@ -1,0 +1,94 @@
+/* Counters Block Styles */
+
+.counters-wrapper {
+    margin: 40px 0;
+}
+
+.counters-container {
+    background: linear-gradient(135deg,#47267D, #7055EE);
+    border-radius: 25px;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.counter-column {
+    flex: 1;
+    text-align: left;
+    position: relative;
+    padding-left: 50px;
+}
+
+.counter-column:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.377);
+}
+
+.counter-number {
+    font-size: 120px;
+    font-weight: 900;
+    color: white;
+    margin: 0 0 70px 0;
+    line-height: 1;
+}
+
+.counter-subtitle {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .counters-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+    
+    .counter-column:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: auto;
+        top: auto;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .counter-number {
+        font-size: 2rem;
+    }
+    
+    .counter-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .counters-container {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+    
+    .counter-number {
+        font-size: 1.8rem;
+    }
+    
+    .counter-subtitle {
+        font-size: 0.8rem;
+    }
+}

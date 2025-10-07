@@ -1,0 +1,71 @@
+/* Featured Item Block - Editor Styles */
+
+/* Make the block preview look like frontend in editor */
+.wp-block-apc-featured-item .featured-item-wrapper {
+    background: var(--light-color, #f8f9fa);
+    padding: 22px;
+    border-radius: 25px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.wp-block-apc-featured-item .featured-item-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, var(--brand-color, #7055EE), var(--secondary-color, #7055EE));
+    border-radius: 27px;
+    z-index: -1;
+}
+
+.wp-block-apc-featured-item .featured-item-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.wp-block-apc-featured-item .featured-item-header i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: var(--brand-color, #7055EE);
+}
+
+.wp-block-apc-featured-item .featured-item-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-text, #333);
+}
+
+.wp-block-apc-featured-item .featured-item-description {
+    margin: 0;
+    font-size: 14px;
+    color: var(--secondary-text, #666);
+    line-height: 1.5;
+}
+
+/* Editor-specific input styles */
+.wp-block-apc-featured-item .featured-item-title-input {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    border: 1px dashed #ddd !important;
+    padding: 5px !important;
+    width: 100% !important;
+    background: transparent !important;
+    color: var(--primary-text, #333) !important;
+}
+
+.wp-block-apc-featured-item .featured-item-description-input {
+    font-size: 14px !important;
+    border: 1px dashed #ddd !important;
+    padding: 5px !important;
+    width: 100% !important;
+    background: transparent !important;
+    color: var(--secondary-text, #666) !important;
+    line-height: 1.5 !important;
+    resize: vertical !important;
+    font-family: inherit !important;
+}

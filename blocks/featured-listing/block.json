@@ -1,0 +1,61 @@
+{
+    "apiVersion": 2,
+    "name": "apc/featured-listing",
+    "title": "Featured Listing",
+    "category": "apc-blocks",
+    "icon": "grid-view",
+    "description": "Display featured listings with customizable content and images.",
+    "keywords": ["featured", "listing", "showcase", "portfolio", "apc"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Featured Listings"
+        },
+        "description": {
+            "type": "string",
+            "default": "Showcase our featured projects and solutions across various industries."
+        },
+        "headerImageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "headerImageAlt": {
+            "type": "string",
+            "default": "Featured Listings"
+        },
+        "listings": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Cloud Solutions",
+                    "description": "Comprehensive cloud infrastructure and migration services designed to scale with your business needs and enhance operational efficiency.",
+                    "buttonText": "Learn More",
+                    "buttonLink": "#contact",
+                    "iconClass": "fas fa-cloud"
+                },
+                {
+                    "title": "Cybersecurity",
+                    "description": "Advanced security solutions to protect your business from evolving cyber threats and ensure compliance with industry standards.",
+                    "buttonText": "Learn More",
+                    "buttonLink": "#contact",
+                    "iconClass": "fas fa-shield-alt"
+                },
+                {
+                    "title": "Managed Services",
+                    "description": "Complete IT management solutions that allow you to focus on your core business while we handle your technology infrastructure.",
+                    "buttonText": "Learn More",
+                    "buttonLink": "#contact",
+                    "iconClass": "fas fa-cogs"
+                }
+            ]
+        }
+    },
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

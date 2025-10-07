@@ -1,0 +1,28 @@
+{
+    "apiVersion": 2,
+    "name": "apc/featured-item",
+    "title": "Featured Item",
+    "category": "apc-blocks",
+    "icon": "star-filled",
+    "description": "Display a featured item with icon, title, and description.",
+    "keywords": ["featured", "item", "icon", "apc"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "default": "Featured Item"
+        },
+        "icon": {
+            "type": "string",
+            "default": "fa-solid fa-star"
+        },
+        "description": {
+            "type": "string",
+            "default": "Short description of this featured item."
+        }
+    }
+}

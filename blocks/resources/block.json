@@ -1,0 +1,35 @@
+{
+    "apiVersion": 2,
+    "name": "apc/resources",
+    "title": "Resources",
+    "category": "apc-blocks",
+    "icon": "book",
+    "description": "Display latest blog posts or resources with slider functionality.",
+    "keywords": ["resources", "blog", "posts", "slider", "articles"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Latest Resources"
+        },
+        "postsPerPage": {
+            "type": "number",
+            "default": 4
+        },
+        "showControls": {
+            "type": "boolean",
+            "default": true
+        },
+        "postType": {
+            "type": "string",
+            "default": "post"
+        }
+    },
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

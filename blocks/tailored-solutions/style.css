@@ -1,0 +1,196 @@
+/* Tailored Solutions Block Styles */
+.tailored-solutions-block {
+    padding: 2px 0;
+    background-color: var(--light-color, #f8f9fa);
+    border-radius: 25px;
+    position: relative;
+    margin: 80px 0;
+}
+
+.tailored-solutions-block::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--secondary-color, #7055EE) 0%,
+        var(--brand-color, #7055EE) 100%
+    );
+    border-radius: 25px;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+}
+
+.tailored-solutions-container {
+    padding: 0 40px;
+}
+
+.tailored-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.tailored-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 40px 40px 40px 0px;
+}
+
+.tailored-text h3 {
+    font-size: 55px;
+    font-weight: 700;
+    color: var(--brand-color, #7055EE);
+    margin-bottom: 30px;
+}
+
+.tailored-text p {
+    font-size: 32px;
+    color: var(--text-color, #333);
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.services-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, var(--light-color, #f8f9fa), transparent);
+    z-index: 2;
+}
+
+.services-list::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to top, var(--light-color, #f8f9fa), transparent);
+    z-index: 2;
+}
+
+.service-item {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 15px;
+    border: 1px solid var(--grey, #e0e0e0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    transform-origin: center;
+    height: 70px;
+    --scroll-y: 0px;
+    --depth-scale: 1;
+    --depth-opacity: 1;
+    transform: translateY(var(--scroll-y)) scale(var(--depth-scale));
+    opacity: var(--depth-opacity);
+}
+
+.service-item:hover {
+    animation-play-state: paused;
+    background: var(--brand-color, #7055EE);
+    border-color: var(--brand-color, #7055EE);
+    box-shadow: 0 4px 20px rgba(112, 85, 238, 0.2);
+}
+
+.service-item:hover .service-text {
+    color: white;
+}
+
+.service-item:hover i {
+    color: white;
+}
+
+.services-list:hover .service-item {
+    animation-play-state: paused;
+}
+
+.service-text {
+    font-size: 32px;
+    color: var(--text-color, #333);
+}
+
+.service-item i {
+    font-size: 40px;
+    color: var(--brand-color, #7055EE);
+}
+
+@keyframes moveServices {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tailored-solutions-block {
+        margin: 40px 0;
+    }
+    
+    .tailored-solutions-container {
+        padding: 0 20px;
+    }
+    
+    .tailored-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .tailored-text {
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .tailored-text h3 {
+        font-size: 36px;
+    }
+    
+    .tailored-text p {
+        font-size: 20px;
+    }
+    
+    .service-text {
+        font-size: 20px;
+    }
+    
+    .service-item i {
+        font-size: 24px;
+    }
+    
+    .services-list {
+        height: 400px;
+    }
+}

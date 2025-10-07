@@ -1,0 +1,446 @@
+/* APC CTA Block Styles */
+.wp-block-apc-cta {
+  position: relative;
+}
+
+.wp-block-apc-cta .apc-cta-container {
+  position: relative;
+}
+
+.wp-block-apc-cta .apc-cta-row-1 {
+  background: var(--brand-color);
+  border-radius: 25px 25px 0 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.wp-block-apc-cta .apc-cta-col-1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.wp-block-apc-cta .apc-cta-col-2 {
+  flex: 1;
+  /* Empty column for future content */
+}
+
+.wp-block-apc-cta .apc-cta-contact {
+  background: white;
+  color: var(--brand-color);
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 900;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 150px;
+}
+
+.wp-block-apc-cta .apc-cta-title {
+  color: white;
+  margin: 0;
+}
+
+.wp-block-apc-cta .apc-cta-row-2 {
+  background: var(--light-color);
+  padding: 40px;
+  border-radius: 0 0 25px 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.wp-block-apc-cta .apc-cta-content {
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.wp-block-apc-cta .apc-cta-benefit {
+  color: var(--text-color);
+  font-weight: 700;
+  margin: 0;
+}
+
+.wp-block-apc-cta .benefits-lists {
+  display: flex;
+  gap: 30px;
+  margin: 20px 40px;
+  width: 100%;
+}
+
+.wp-block-apc-cta .benefits-lists ul {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wp-block-apc-cta .benefits-lists li {
+  color: var(--text-color);
+  padding: 8px 0;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Next Steps Section */
+.wp-block-apc-cta .next-step {
+  margin-top: 30px;
+}
+
+.wp-block-apc-cta .next-step-title {
+  color: var(--text-color);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.wp-block-apc-cta .next-step-columns {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.wp-block-apc-cta .next-step-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.wp-block-apc-cta .next-step-item:first-child {
+  padding-left: 0px;
+}
+
+.wp-block-apc-cta .step-number {
+  color: var(--text-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.wp-block-apc-cta .step-description {
+  color: var(--text-color);
+  margin: 0;
+  flex: 1;
+  font-size: 14px;
+}
+
+.wp-block-apc-cta .step-arrow {
+  color: var(--brand-color);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* CTA Form Styles */
+.wp-block-apc-cta .cta-form {
+  background: white;
+  border-radius: 25px;
+  padding: 80px 50px;
+  margin-top: -250px;
+}
+
+.wp-block-apc-cta .cta-form h4 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--grey);
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.wp-block-apc-cta .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wp-block-apc-cta .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+ input,
+ select,
+textarea {
+  padding: 15px;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  font-family: inherit;
+  background: white;
+  transition: all 0.3s ease;
+  font-size: inherit;
+  height: 100px;
+}
+
+ input:focus,
+ select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--brand-color);
+  box-shadow: 0 0 0 3px rgba(112, 85, 238, 0.1);
+}
+
+ input::placeholder,
+ textarea::placeholder {
+  color: #999;
+}
+
+ select {
+  cursor: pointer;
+  color: #333;
+}
+
+select option:first-child {
+  color: #999;
+}
+
+ textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+
+
+.wp-block-apc-cta .cta-submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle 80px at var(--shimmer-x, 50%) var(--shimmer-y, 50%),
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 70%
+  );
+  transform: scale(0);
+  transition: transform 0.2s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.wp-block-apc-cta .cta-submit-btn:hover::before {
+  transform: scale(1);
+}
+
+.wp-block-apc-cta .cta-submit-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--brand-color)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.wp-block-apc-cta .cta-submit-btn:hover {
+  color: white;
+}
+
+.wp-block-apc-cta .cta-submit-btn:hover::after {
+  opacity: 1;
+}
+
+.wp-block-apc-cta .cta-submit-btn:active {
+  transform: scale(0.98);
+  transition-duration: 0.1s;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .wp-block-apc-cta .apc-cta-row-1 {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .wp-block-apc-cta .apc-cta-col-1 {
+    text-align: center;
+  }
+
+  .wp-block-apc-cta .apc-cta-title {
+    font-size: 32px;
+  }
+
+  .wp-block-apc-cta .apc-cta-row-2 {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .wp-block-apc-cta .apc-cta-content {
+    font-size: 16px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .wp-block-apc-cta .benefits-lists {
+    gap: 15px;
+    margin: 15px 0;
+  }
+
+  .wp-block-apc-cta .benefits-lists ul {
+    text-align: center;
+  }
+
+  .wp-block-apc-cta .next-step-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .wp-block-apc-cta .next-step-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  .wp-block-apc-cta .step-arrow {
+    transform: rotate(90deg);
+  }
+
+  .wp-block-apc-cta .step-description {
+    font-size: 16px;
+  }
+
+  .wp-block-apc-cta .cta-form {
+    margin-top: 0;
+    padding: 40px 25px;
+  }
+
+  .wp-block-apc-cta .cta-form h4 {
+    font-size: 20px;
+  }
+
+  .wp-block-apc-cta .form-group input,
+  .wp-block-apc-cta .form-group select,
+  .wp-block-apc-cta .form-group textarea {
+    padding: 12px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .wp-block-apc-cta .form-group textarea {
+    height: 80px;
+  }
+
+  .wp-block-apc-cta .cta-submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .wp-block-apc-cta .apc-cta-contact {
+    margin: 0 auto;
+  }
+}
+
+/* Gravity Forms Integration Styles */
+.wp-block-apc-cta .gform_wrapper {
+  margin: 0;
+}
+
+.wp-block-apc-cta .gform_wrapper .gform_body {
+  padding: 0;
+}
+
+.wp-block-apc-cta .gform_wrapper .gfield {
+  margin-bottom: 20px;
+}
+
+.wp-block-apc-cta .gform_wrapper .gfield input[type="text"],
+.wp-block-apc-cta .gform_wrapper .gfield input[type="email"],
+.wp-block-apc-cta .gform_wrapper .gfield input[type="tel"],
+.wp-block-apc-cta .gform_wrapper .gfield select,
+.wp-block-apc-cta .gform_wrapper .gfield textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--grey);
+  border-radius: 8px;
+  font-family: inherit;
+  background: white;
+  transition: all 0.3s ease;
+  font-size: inherit;
+  box-sizing: border-box;
+}
+
+.wp-block-apc-cta .gform_wrapper .gfield input:focus,
+.wp-block-apc-cta .gform_wrapper .gfield select:focus,
+.wp-block-apc-cta .gform_wrapper .gfield textarea:focus {
+  outline: none;
+  border-color: var(--brand-color);
+  box-shadow: 0 0 0 3px rgba(112, 85, 238, 0.1);
+}
+
+.wp-block-apc-cta .gform_wrapper .gfield_label {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  display: block;
+}
+
+.wp-block-apc-cta .gform_wrapper .ginput_container {
+  margin: 0;
+}
+
+.wp-block-apc-cta .gform_wrapper .gform_footer {
+  margin: 30px 0 0 0;
+  padding: 0;
+}
+
+.wp-block-apc-cta .gform_wrapper .gform_button {
+background: var(--brand-color); 
+color: white; 
+border: none; 
+padding: 18px 30px; 
+border-radius: 25px; 
+font-weight: 500; 
+cursor: pointer; 
+transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+letter-spacing: 0.5px; 
+position: relative; 
+overflow: hidden; 
+transform: translateZ(0px);
+ will-change: transform, background;
+  --shimmer-x: 50%; 
+  --shimmer-y: 50%; 
+  width: 200px; 
+  font-size: 24px; 
+  height: auto;
+}      
+
+
+.wp-block-apc-cta .gform_wrapper .gform_button:active {
+  transform: scale(0.98) translateZ(0);
+  transition: transform 0.15s ease-out;
+}
+
+/* Mobile Gravity Forms Styles */
+@media (max-width: 768px) {
+  .wp-block-apc-cta .gform_wrapper .gform_button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+  }
+}

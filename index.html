@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APC Integrated - Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <header class="header">
+        <div class="header-container">
+          <div class="logo">
+            <img src="apc_logo.png" alt="APC Integrated Logo" />
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-buttons">
+            <a href="#remote-support" class="action-btn">
+              <i class="fa-solid fa-headset"></i>
+              Remote<br />Support
+            </a>
+            <a href="#client-portal" class="action-btn">
+              <i class="fa-solid fa-user"></i>
+              Client<br />Portal
+            </a>
+          </div>
+
+          <!-- Hamburger Menu Button -->
+          <button class="hamburger-menu" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+
+        <!-- Main Navigation (Desktop & Tablet) -->
+        <nav class="main-nav">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item mega-menu-item">
+              <a href="#solutions" class="nav-link">Solutions</a>
+              <div class="mega-menu">
+                <div class="mega-menu-container">
+                  <div class="mega-menu-column">
+                    <h4>IT Support</h4>
+                    <ul>
+                      <li><a href="#helpdesk">24/7 Helpdesk</a></li>
+                      <li><a href="#remote-support">Remote Support</a></li>
+                      <li><a href="#onsite-support">On-site Support</a></li>
+                      <li><a href="#maintenance">System Maintenance</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h4>Cloud Solutions</h4>
+                    <ul>
+                      <li><a href="#cloud-migration">Cloud Migration</a></li>
+                      <li><a href="#azure">Microsoft Azure</a></li>
+                      <li><a href="#backup">Cloud Backup</a></li>
+                      <li><a href="#hosting">Cloud Hosting</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h4>Security</h4>
+                    <ul>
+                      <li><a href="#cybersecurity">Cybersecurity</a></li>
+                      <li><a href="#monitoring">Threat Monitoring</a></li>
+                      <li><a href="#compliance">Compliance</a></li>
+                      <li><a href="#data-protection">Data Protection</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h4>Infrastructure</h4>
+                    <ul>
+                      <li><a href="#networking">Network Setup</a></li>
+                      <li><a href="#servers">Server Management</a></li>
+                      <li><a href="#hardware">Hardware Supply</a></li>
+                      <li><a href="#voip">VoIP Solutions</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item mega-menu-item">
+              <a href="#sectors" class="nav-link">Sectors</a>
+              <div class="mega-menu">
+                <div class="mega-menu-container">
+                  <div class="mega-menu-column">
+                    <h4>Professional Services</h4>
+                    <ul>
+                      <li><a href="#accounting">Accounting</a></li>
+                      <li><a href="#legal">Legal</a></li>
+                      <li><a href="#consulting">Consulting</a></li>
+                      <li><a href="#architecture">Architecture</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h4>Healthcare</h4>
+                    <ul>
+                      <li>
+                        <a href="#medical-practices">Medical Practices</a>
+                      </li>
+                      <li><a href="#dental">Dental Clinics</a></li>
+                      <li><a href="#veterinary">Veterinary</a></li>
+                      <li><a href="#care-homes">Care Homes</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h4>Education & Non-Profit</h4>
+                    <ul>
+                      <li><a href="#schools">Schools</a></li>
+                      <li><a href="#universities">Universities</a></li>
+                      <li><a href="#charities">Charities</a></li>
+                      <li><a href="#government">Government</a></li>
+                    </ul>
+                  </div>
+                  <div class="mega-menu-column">
+                    <h4>Business</h4>
+                    <ul>
+                      <li><a href="#manufacturing">Manufacturing</a></li>
+                      <li><a href="#retail">Retail</a></li>
+                      <li><a href="#hospitality">Hospitality</a></li>
+                      <li><a href="#finance">Finance</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="#resources" class="nav-link">Resources</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Navigation (Accordion, visible only on mobile) -->
+        <nav class="mobile-nav">
+          <ul class="mobile-nav-menu">
+            <li class="mobile-nav-item">
+              <a href="#about" class="mobile-nav-link">About</a>
+            </li>
+
+            <!-- Multi-level Solutions accordion -->
+            <li class="mobile-nav-item mobile-accordion-parent">
+              <button class="mobile-accordion-toggle" aria-expanded="false">
+                Solutions
+              </button>
+              <ul class="mobile-accordion-panel">
+                <!-- IT Support group (second level) -->
+                <li class="mobile-accordion-parent">
+                  <button class="mobile-accordion-toggle" aria-expanded="false">
+                    IT Support
+                  </button>
+                  <ul class="mobile-accordion-panel">
+                    <li><a href="#helpdesk">24/7 Helpdesk</a></li>
+                    <li><a href="#remote-support">Remote Support</a></li>
+                    <li><a href="#onsite-support">On-site Support</a></li>
+                    <li><a href="#maintenance">System Maintenance</a></li>
+                  </ul>
+                </li>
+                <!-- Cloud Solutions group -->
+                <li class="mobile-accordion-parent">
+                  <button class="mobile-accordion-toggle" aria-expanded="false">
+                    Cloud Solutions
+                  </button>
+                  <ul class="mobile-accordion-panel">
+                    <li><a href="#cloud-migration">Cloud Migration</a></li>
+                    <li><a href="#azure">Microsoft Azure</a></li>
+                    <li><a href="#backup">Cloud Backup</a></li>
+                    <li><a href="#hosting">Cloud Hosting</a></li>
+                  </ul>
+                </li>
+                <!-- Security group -->
+                <li class="mobile-accordion-parent">
+                  <button class="mobile-accordion-toggle" aria-expanded="false">
+                    Security
+                  </button>
+                  <ul class="mobile-accordion-panel">
+                    <li><a href="#cybersecurity">Cybersecurity</a></li>
+                    <li><a href="#monitoring">Threat Monitoring</a></li>
+                    <li><a href="#compliance">Compliance</a></li>
+                    <li><a href="#data-protection">Data Protection</a></li>
+                  </ul>
+                </li>
+                <!-- Infrastructure group -->
+                <li class="mobile-accordion-parent">
+                  <button class="mobile-accordion-toggle" aria-expanded="false">
+                    Infrastructure
+                  </button>
+                  <ul class="mobile-accordion-panel">
+                    <li><a href="#networking">Network Setup</a></li>
+                    <li><a href="#servers">Server Management</a></li>
+                    <li><a href="#hardware">Hardware Supply</a></li>
+                    <li><a href="#voip">VoIP Solutions</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Multi-level Sectors accordion -->
+            <li class="mobile-nav-item mobile-accordion-parent">
+              <button class="mobile-accordion-toggle" aria-expanded="false">
+                Sectors
+              </button>
+              <ul class="mobile-accordion-panel">
+                <li class="mobile-accordion-parent">
+                  <button class="mobile-accordion-toggle" aria-expanded="false">
+                    Professional Services
+                  </button>
+                  <ul class="mobile-accordion-panel">
+                    <li><a href="#accounting">Accounting</a></li>
+                    <li><a href="#legal">Legal</a></li>
+                    <li><a href="#consulting">Consulting</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                  </ul>
+                </li>
+                <li class="mobile-accordion-parent">
+                  <button class="mobile-accordion-toggle" aria-expanded="false">
+                    Healthcare
+                  </button>
+                  <ul class="mobile-accordion-panel">
+                    <li><a href="#medical-practices">Medical Practices</a></li>
+                    <li><a href="#dental">Dental Clinics</a></li>
+                    <li><a href="#veterinary">Veterinary</a></li>
+                    <li><a href="#care-homes">Care Homes</a></li>
+                  </ul>
+                </li>
+                <li class="mobile-accordion-parent">
+                  <button class="mobile-accordion-toggle" aria-expanded="false">
+                    Education & Non-Profit
+                  </button>
+                  <ul class="mobile-accordion-panel">
+                    <li><a href="#schools">Schools</a></li>
+                    <li><a href="#universities">Universities</a></li>
+                    <li><a href="#charities">Charities</a></li>
+                    <li><a href="#government">Government</a></li>
+                  </ul>
+                </li>
+                <li class="mobile-accordion-parent">
+                  <button class="mobile-accordion-toggle" aria-expanded="false">
+                    Business
+                  </button>
+                  <ul class="mobile-accordion-panel">
+                    <li><a href="#manufacturing">Manufacturing</a></li>
+                    <li><a href="#retail">Retail</a></li>
+                    <li><a href="#hospitality">Hospitality</a></li>
+                    <li><a href="#finance">Finance</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li class="mobile-nav-item">
+              <a href="#resources" class="mobile-nav-link">Resources</a>
+            </li>
+          </ul>
+          <!-- Drill panels container (populated by JS) -->
+          <div class="mobile-drillpanels" aria-hidden="true">
+            <!-- panels are inserted here dynamically -->
+          </div>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-icons-container">
+            <!-- Cloud Solutions Icons -->
+            <div class="hero-icons cloud-icons">
+              <img
+                src="assets/img/cloud/icon1.png"
+                alt="Cloud Icon 1"
+                class="hero-icon icon-top-left"
+              />
+              <img
+                src="assets/img/cloud/icon2.png"
+                alt="Cloud Icon 2"
+                class="hero-icon icon-top-right"
+              />
+              <img
+                src="assets/img/cloud/icon3.png"
+                alt="Cloud Icon 3"
+                class="hero-icon icon-bottom-left"
+              />
+              <img
+                src="assets/img/cloud/icon4.png"
+                alt="Cloud Icon 4"
+                class="hero-icon icon-bottom-right"
+              />
+            </div>
+
+            <!-- Performance Icons -->
+            <div class="hero-icons performance-icons">
+              <img
+                src="assets/img/performance/icon1.png"
+                alt="Performance Icon 1"
+                class="hero-icon icon-top-right"
+              />
+              <img
+                src="assets/img/performance/icon2.png"
+                alt="Performance Icon 2"
+                class="hero-icon icon-bottom-left"
+              />
+            </div>
+
+            <!-- Processes Icons -->
+            <div class="hero-icons processes-icons">
+              <img
+                src="assets/img/processes/icon1.png"
+                alt="Processes Icon 1"
+                class="hero-icon icon-top-left"
+              />
+              <img
+                src="assets/img/processes/icon2.png"
+                alt="Processes Icon 2"
+                class="hero-icon icon-bottom-right"
+              />
+            </div>
+
+            <!-- Enterprise Icons -->
+            <div class="hero-icons enterprise-icons">
+              <img
+                src="assets/img/enterprise/icon1.png"
+                alt="Enterprise Icon 1"
+                class="hero-icon icon-top-left"
+              />
+              <img
+                src="assets/img/enterprise/icon2.png"
+                alt="Enterprise Icon 2"
+                class="hero-icon icon-top-right"
+              />
+              <img
+                src="assets/img/enterprise/icon3.png"
+                alt="Enterprise Icon 3"
+                class="hero-icon icon-bottom-left"
+              />
+              <img
+                src="assets/img/enterprise/icon4.png"
+                alt="Enterprise Icon 4"
+                class="hero-icon icon-bottom-right"
+              />
+            </div>
+          </div>
+
+          <div class="hero-text">
+            <div class="hero-line">Using APC for</div>
+            <div class="hero-highlight">
+              <div class="cube-container">
+                <div class="cube">
+                  <div class="cube-face">cloud solutions</div>
+                  <div class="cube-face">improved performance</div>
+                  <div class="cube-face">optimizing processes</div>
+                  <div class="cube-face">enterprise-grade security</div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-line">in your business</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Do Section -->
+
+      <!-- What We Do Info Section -->
+      <section class="what-we-do">
+        <div class="what-we-do-container">
+          <div class="what-we-do-content">
+            <div class="what-we-do-text">
+              <div class="section-label">What we do</div>
+              <h2 class="section-title">Complexity, Simplified and Secured</h2>
+            </div>
+            <div class="what-we-do-image">
+              <img src="./assets/img/site/what_we_do.png" alt="What We Do" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="what-we-do-info">
+        <div class="what-we-do-info-container">
+          <div class="info-column">
+            <div class="info-card">
+              <i class="fa-solid fa-users"></i>
+              <div class="info-content">
+                <h4>Expert Team</h4>
+                <p>
+                  Our experienced professionals deliver exceptional results with
+                  cutting-edge technology solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="info-column">
+            <div class="info-card">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div class="info-content">
+                <h4>Secure Solutions</h4>
+                <p>
+                  Enterprise-grade security measures ensure your data and
+                  systems remain protected at all times.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="info-column">
+            <div class="info-card">
+              <i class="fa-solid fa-rocket"></i>
+              <div class="info-content">
+                <h4>Fast Implementation</h4>
+                <p>
+                  Rapid deployment and seamless integration to get your business
+                  up and running quickly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tailored Solutions Section -->
+      <section class="tailored-solutions">
+        <div class="tailored-solutions-container">
+          <div class="tailored-content">
+            <div class="tailored-text">
+              <h3>Tailored solutions, for every problem</h3>
+              <p>
+                From IT support and infrastructure to cyber security,
+                connectivity and Managed Contracts - we're here to help.
+              </p>
+            </div>
+            <div class="services-list">
+              <a href="#it-support" class="service-item">
+                <span class="service-text">IT Support & Helpdesk</span>
+                <i class="fa-solid fa-headset"></i>
+              </a>
+              <a href="#cloud-infrastructure" class="service-item">
+                <span class="service-text">Cloud Infrastructure</span>
+                <i class="fa-solid fa-cloud"></i>
+              </a>
+              <a href="#cyber-security" class="service-item">
+                <span class="service-text">Cyber Security</span>
+                <i class="fa-solid fa-shield-halved"></i>
+              </a>
+              <a href="#network-connectivity" class="service-item">
+                <span class="service-text">Network Connectivity</span>
+                <i class="fa-solid fa-network-wired"></i>
+              </a>
+              <a href="#managed-contracts" class="service-item">
+                <span class="service-text">Managed Contracts</span>
+                <i class="fa-solid fa-file-contract"></i>
+              </a>
+              <a href="#data-backup" class="service-item">
+                <span class="service-text">Data Backup & Recovery</span>
+                <i class="fa-solid fa-database"></i>
+              </a>
+              <a href="#software-solutions" class="service-item">
+                <span class="service-text">Software Solutions</span>
+                <i class="fa-solid fa-laptop-code"></i>
+              </a>
+              <a href="#hardware-management" class="service-item">
+                <span class="service-text">Hardware Management</span>
+                <i class="fa-solid fa-server"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- IT Challenges Section -->
+      <section class="it-challenges">
+        <div class="it-challenges-container">
+          <div class="it-challenges-content">
+            <div class="challenges-text">
+              <h2>Solving IT Challenges in every industry, every day.</h2>
+              <p>
+                From IT support and infrastructure to cyber security,
+                connectivity and Managed Contracts - we're here to help.
+              </p>
+            </div>
+            <div class="challenges-cards-container">
+              <div class="challenges-card">
+                <h4>Accounting</h4>
+                <p>
+                  With accounting and finance practices having moved fully
+                  online, there is a growing need for technology support and
+                  management through a Managed Service Provider (MSP) with
+                  extensive experience. APC is here to meet that need.
+                </p>
+                <a href="#contact" class="challenge-btn">Talk to an expert</a>
+              </div>
+              <div class="challenges-card">
+                <h4>Healthcare</h4>
+                <p>
+                  Healthcare organizations require robust, secure, and compliant
+                  IT infrastructure. Our specialized solutions ensure patient
+                  data protection while maintaining operational efficiency and
+                  regulatory compliance.
+                </p>
+                <a href="#contact" class="challenge-btn">Talk to an expert</a>
+              </div>
+              <div class="challenges-card">
+                <h4>Legal</h4>
+                <p>
+                  Law firms need secure document management, reliable
+                  communication systems, and robust backup solutions. We provide
+                  tailored IT services that protect sensitive client
+                  information.
+                </p>
+                <a href="#contact" class="challenge-btn">Talk to an expert</a>
+              </div>
+              <div class="challenges-card">
+                <h4>Manufacturing</h4>
+                <p>
+                  Manufacturing companies require integrated systems that
+                  connect production, inventory, and management processes. Our
+                  solutions optimize efficiency while maintaining security.
+                </p>
+                <a href="#contact" class="challenge-btn">Talk to an expert</a>
+              </div>
+              <div class="challenges-card">
+                <h4>Education</h4>
+                <p>
+                  Educational institutions need scalable IT infrastructure that
+                  supports both in-person and remote learning. We provide
+                  solutions that enhance the learning experience.
+                </p>
+                <a href="#contact" class="challenge-btn">Talk to an expert</a>
+              </div>
+              <div class="challenges-card">
+                <h4>Retail</h4>
+                <p>
+                  Retail businesses need integrated POS systems, inventory
+                  management, and customer data protection. Our solutions help
+                  streamline operations and enhance customer experience.
+                </p>
+                <a href="#contact" class="challenge-btn">Talk to an expert</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trusted Partners Section -->
+      <section class="trusted-partners">
+        <div class="trusted-partners-container">
+          <div class="partners-content">
+            <h2>Trusted partners</h2>
+            <p><strong>Working with the best</strong></p>
+            <div class="partners-icons">
+              <div class="partner-icon">
+                <img src="assets/img/partners/microsoft.png" alt="Partner 1" />
+              </div>
+              <div class="partner-icon">
+                <img src="assets/img/partners/cisco.png" alt="Partner 2" />
+              </div>
+              <div class="partner-icon">
+                <img src="assets/img/partners/sonicwal.png" alt="Partner 3" />
+              </div>
+              <div class="partner-icon">
+                <img src="assets/img/partners/fortinet.png" alt="Partner 4" />
+              </div>
+              <div class="partner-icon">
+                <img src="assets/img/partners/azure.png" alt="Partner 5" />
+              </div>
+              <div class="partner-icon">
+                <img
+                  src="assets/img/partners/Darktrace_logo logo.png"
+                  alt="Partner 6"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials">
+        <div class="testimonials-container">
+          <div class="testimonials-header">
+            <div class="testimonials-header-left">
+              <h2>Trusted by 200+ clients</h2>
+              <p>CSAT 96.4%</p>
+            </div>
+            <div class="testimonials-header-right">
+              <p>194 reviews in 90 days</p>
+            </div>
+          </div>
+          <div class="testimonials-slider">
+            <div class="testimonials-track">
+              <div class="testimonial-card">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "APC Integrated has transformed our IT infrastructure. Their
+                  proactive support and expertise have been invaluable to our
+                  business growth."
+                </p>
+                <div class="testimonial-author">
+                  <strong>Sarah J</strong>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Outstanding service and reliability. APC's team is always
+                  responsive and their solutions are exactly what we needed for
+                  our growing company."
+                </p>
+                <div class="testimonial-author">
+                  <strong>Michael C</strong>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "The level of professionalism and technical expertise from APC
+                  is unmatched. They've become an essential part of our business
+                  operations."
+                </p>
+                <div class="testimonial-author">
+                  <strong>Emma R</strong>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "APC's cloud solutions and security measures have given us
+                  peace of mind. Their team is knowledgeable, friendly, and
+                  always available."
+                </p>
+                <div class="testimonial-author">
+                  <strong>David T</strong>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                  "Working with APC has been a game-changer. Their proactive
+                  monitoring and support have eliminated our IT headaches
+                  completely."
+                </p>
+                <div class="testimonial-author">
+                  <strong>Lisa P</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources Section -->
+      <section class="resources">
+        <div class="resources-container">
+          <div class="resources-header">
+            <h2>Latest Resources</h2>
+            <div class="resources-controls">
+              <button
+                class="resource-arrow resource-prev"
+                onclick="previousResource()"
+              >
+                <i class="fa-solid fa-arrow-left"></i>
+              </button>
+              <button
+                class="resource-arrow resource-next"
+                onclick="nextResource()"
+              >
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="resources-slider">
+            <div class="resources-track">
+              <div
+                class="resource-card"
+                data-href="/resources/cloud-security-strategies"
+              >
+                <div class="resource-image">
+                  <img src="assets/img/site/resource.jpg" alt="Resource 1" />
+                </div>
+                <div class="resource-tags">
+                  <a href="/tags/cloud-security" class="resource-tag"
+                    >Cloud Security</a
+                  >
+                  <a href="/tags/best-practices" class="resource-tag"
+                    >Best Practices</a
+                  >
+                </div>
+                <h4>
+                  Essential Cloud Security Strategies for Modern Businesses
+                </h4>
+              </div>
+              <div
+                class="resource-card"
+                data-href="/resources/it-support-partner-guide"
+              >
+                <div class="resource-image">
+                  <img src="assets/img/site/resource.jpg" alt="Resource 2" />
+                </div>
+                <div class="resource-tags">
+                  <a href="/tags/it-support" class="resource-tag">IT Support</a>
+                  <a href="/tags/guide" class="resource-tag">Guide</a>
+                </div>
+                <h4>
+                  How to Choose the Right IT Support Partner for Your Business
+                </h4>
+              </div>
+              <div
+                class="resource-card"
+                data-href="/resources/cybersecurity-trends-2024"
+              >
+                <div class="resource-image">
+                  <img src="assets/img/site/resource.jpg" alt="Resource 3" />
+                </div>
+                <div class="resource-tags">
+                  <a href="/tags/cybersecurity" class="resource-tag"
+                    >Cybersecurity</a
+                  >
+                  <a href="/tags/trends" class="resource-tag">Trends</a>
+                </div>
+                <h4>2024 Cybersecurity Trends Every Business Should Know</h4>
+              </div>
+              <div
+                class="resource-card"
+                data-href="/resources/digital-transformation-guide"
+              >
+                <div class="resource-image">
+                  <img src="assets/img/site/resource.jpg" alt="Resource 4" />
+                </div>
+                <div class="resource-tags">
+                  <a href="/tags/digital-transformation" class="resource-tag"
+                    >Digital Transformation</a
+                  >
+                </div>
+                <h4>Complete Guide to Digital Transformation for SMBs</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- APC CTA Section -->
+      <section class="apc-cta">
+        <div class="apc-cta-container">
+          <div class="apc-cta-row-1">
+            <div class="apc-cta-col-1">
+              <p class="apc-cta-contact">Contact Us</p>
+              <h2 class="apc-cta-title">
+                Partner with us for comprehensive IT
+              </h2>
+            </div>
+            <div class="apc-cta-col-2">
+              <!-- Empty column for future content -->
+            </div>
+          </div>
+          <div class="apc-cta-row-2">
+            <div class="apc-cta-col-1">
+              <p class="apc-cta-content">
+                We’re happy to answer any questions you may have and help you
+                determine which of our services best fit your needs.
+              </p>
+              <p class="apc-cta-benefit">Your Benefits</p>
+              <div class="benefits-lists">
+                <ul>
+                  <li>Client-oriented</li>
+                  <li>Independent</li>
+                  <li>Competent</li>
+                </ul>
+                <ul>
+                  <li>Results-driven</li>
+                  <li>Problem-solving</li>
+                  <li>Transparent</li>
+                </ul>
+              </div>
+              <div class="next-step">
+                <p class="next-step-title">What happens next?</p>
+                <div class="next-step-columns">
+                  <div class="next-step-item">
+                    <p class="step-number">1</p>
+                    <p class="step-description">
+                      We Schedule a call at your convenience
+                    </p>
+                  </div>
+                  <div class="step-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <div class="next-step-item">
+                    <p class="step-number">2</p>
+                    <p class="step-description">
+                      We understand what you need in a consulting meeting
+                    </p>
+                  </div>
+                  <div class="step-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <div class="next-step-item">
+                    <p class="step-number">3</p>
+                    <p class="step-description">We prepare a proposal</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Logo -->
+            </div>
+            <div class="apc-cta-col-2">
+              <div class="cta-form">
+                <form action="#" method="POST" class="contact-form">
+                  <h4 align="center">Parter with APC today</h4>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Email Address"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="Phone Number"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      placeholder="Company Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <select id="service" name="service" required>
+                      <option value="">Select a Service</option>
+                      <option value="it-support">IT Support & Helpdesk</option>
+                      <option value="cloud-infrastructure">
+                        Cloud Infrastructure
+                      </option>
+                      <option value="cyber-security">Cyber Security</option>
+                      <option value="network-connectivity">
+                        Network Connectivity
+                      </option>
+                      <option value="managed-contracts">
+                        Managed Contracts
+                      </option>
+                      <option value="data-backup">
+                        Data Backup & Recovery
+                      </option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Tell us about your IT needs..."
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="cta-submit-btn">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Content Area (for future development) -->
+      <main>
+        <!-- Homepage content will go here -->
+      </main>
+
+      <!-- Footer Section -->
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <!-- Logo Column -->
+            <div class="footer-logo-column">
+              <img
+                src="assets/img/site/apc-blue_dark.png"
+                alt="APC Integrated Logo"
+                class="footer-logo"
+              />
+            </div>
+
+            <!-- Contact Column with Gradient Border -->
+            <div class="footer-contact-column">
+              <div class="contact-content">
+                <div class="contact-row">
+                  <div class="contact-text-column">
+                    <h3>Get in touch with one of our expert today.</h3>
+                  </div>
+                  <div class="contact-image-column">
+                    <img
+                      src="assets/img/site/our_expert.png"
+                      alt="Contact Us"
+                      class="contact-image"
+                    />
+                  </div>
+                </div>
+                <div class="contact-button-row">
+                  <button class="footer-expert-btn dark">
+                    Speak to an expert
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Footer Row -->
+          <div class="footer-content">
+            <!-- IT Health Check Column -->
+            <div class="footer-contact-column">
+              <div class="contact-content">
+                <div class="contact-row">
+                  <div class="contact-text-column">
+                    <h3>IT health check</h3>
+                    <p>Are there security gaps in your network</p>
+                  </div>
+                </div>
+                <div class="contact-button-row">
+                  <button class="footer-expert-btn gradient-border">
+                    <span>Discover</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contract Management Column -->
+            <div class="footer-contact-column">
+              <div class="contact-content">
+                <div class="contact-row">
+                  <div class="contact-text-column">
+                    <h3>Contract Management</h3>
+                    <p>Managed Business Mobile & Utility Services</p>
+                  </div>
+                </div>
+                <div class="contact-button-row">
+                  <button class="footer-expert-btn gradient-border">
+                    <span>Discover</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Copyright Section -->
+          <div class="footer-copyright">
+            <p>&copy; 2024 APC Integrated. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

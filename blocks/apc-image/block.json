@@ -1,0 +1,35 @@
+{
+    "apiVersion": 2,
+    "name": "apc/image",
+    "title": "APC Image",
+    "category": "apc-blocks",
+    "icon": "format-image",
+    "description": "Custom styled image block with 600px max height, border radius, and full width container.",
+    "keywords": ["image", "picture", "photo", "apc"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "imageId": {
+            "type": "number",
+            "default": 0
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "imageCaption": {
+            "type": "string",
+            "default": ""
+        }
+    },
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

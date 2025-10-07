@@ -1,0 +1,31 @@
+{
+    "apiVersion": 2,
+    "name": "apc/tailored-solutions",
+    "title": "Tailored Solutions",
+    "category": "apc-blocks",
+    "icon": "admin-tools",
+    "description": "Display services from the Services custom post type in a tailored solutions section.",
+    "keywords": ["services", "solutions", "tailored", "apc"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Tailored solutions, for every problem"
+        },
+        "description": {
+            "type": "string", 
+            "default": "From IT support and infrastructure to cyber security, connectivity and Managed Contracts - we're here to help."
+        },
+        "maxServices": {
+            "type": "number",
+            "default": 8
+        }
+    },
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

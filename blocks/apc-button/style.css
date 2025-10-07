@@ -1,0 +1,165 @@
+/* APC Button Block Styles */
+
+.apc-button-wrapper {
+  margin: 20px 0;
+}
+
+.apc-button-wrapper.text-left {
+  text-align: left;
+}
+
+.apc-button-wrapper.text-center {
+  text-align: center;
+}
+
+.apc-button-wrapper.text-right {
+  text-align: right;
+}
+
+/* Base button styles - same as challenge-btn */
+.apc-button {
+  background: var(--brand-color, #7055EE);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transform: translateZ(0);
+  will-change: transform, background;
+  --shimmer-x: 50%;
+  --shimmer-y: 50%;
+}
+
+.apc-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle 80px at var(--shimmer-x, 50%) var(--shimmer-y, 50%),
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 70%
+  );
+  transform: scale(0);
+  transition: transform 0.2s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.apc-button:hover::before {
+  transform: scale(1);
+}
+
+.apc-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color, #7055EE),
+    var(--brand-color, #7055EE)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.apc-button:hover {
+  color: white;
+}
+
+.apc-button:hover::after {
+  opacity: 1;
+}
+
+.apc-button:active {
+  transform: scale(0.98);
+  transition-duration: 0.1s;
+}
+
+/* Button Sizes */
+.apc-button-small {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.apc-button-medium {
+  padding: 15px 30px;
+  font-size: 16px;
+}
+
+.apc-button-large {
+  padding: 20px 40px;
+  font-size: 18px;
+}
+
+/* Button Styles */
+.apc-button-primary {
+  background: var(--brand-color, #7055EE);
+  color: white;
+}
+
+.apc-button-secondary {
+  background: var(--accent-blue, #3182ce);
+  color: white;
+}
+
+.apc-button-secondary::after {
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue, #1a365d),
+    var(--accent-blue, #3182ce)
+  );
+}
+
+.apc-button-outline {
+  background: transparent;
+  color: var(--brand-color, #7055EE);
+  border: 2px solid var(--brand-color, #7055EE);
+}
+
+.apc-button-outline::after {
+  background: var(--brand-color, #7055EE);
+}
+
+.apc-button-outline:hover {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .apc-button {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  
+  .apc-button-small {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .apc-button-medium {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  
+  .apc-button-large {
+    padding: 16px 32px;
+    font-size: 17px;
+  }
+}

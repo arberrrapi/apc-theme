@@ -1,0 +1,49 @@
+{
+    "apiVersion": 2,
+    "name": "apc/switch-to-apc",
+    "title": "Switch to APC",
+    "category": "apc-blocks",
+    "icon": "migrate",
+    "description": "Display reasons to switch to APC with customizable content and gradient text labels.",
+    "keywords": ["switch", "apc", "reasons", "benefits", "migration"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "<h2>Why <span style=\"color: #7055EE;\">Switch to APC</span>?</h2>"
+        },
+        "listings": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Expert Support",
+                    "description": "Get 24/7 technical support from certified professionals who understand your business needs.",
+                    "buttonText": "Learn More",
+                    "buttonLink": "#contact",
+                    "labelText": "24/7"
+                },
+                {
+                    "title": "Cost Effective",
+                    "description": "Reduce your IT costs while improving performance and reliability with our managed services.",
+                    "buttonText": "Learn More",
+                    "buttonLink": "#contact",
+                    "labelText": "Save $$$"
+                },
+                {
+                    "title": "Proven Results",
+                    "description": "Join hundreds of satisfied clients who have transformed their business with APC solutions.",
+                    "buttonText": "Learn More",
+                    "buttonLink": "#contact",
+                    "labelText": "Trusted"
+                }
+            ]
+        }
+    },
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

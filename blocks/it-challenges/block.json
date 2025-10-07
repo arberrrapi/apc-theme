@@ -1,0 +1,80 @@
+{
+    "apiVersion": 2,
+    "name": "apc/it-challenges",
+    "title": "IT Challenges",
+    "category": "apc-blocks",
+    "icon": "admin-tools",
+    "description": "Display industry-specific IT challenges and solutions with customizable content.",
+    "keywords": ["challenges", "industries", "solutions", "it", "apc"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Solving IT Challenges in every industry, every day."
+        },
+        "description": {
+            "type": "string",
+            "default": "From IT support and infrastructure to cyber security, connectivity and Managed Contracts - we're here to help."
+        },
+        "challenges": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Accounting",
+                    "description": "With accounting and finance practices having moved fully online, there is a growing need for technology support and management through a Managed Service Provider (MSP) with extensive experience. APC is here to meet that need.",
+                    "buttonText": "Talk to an expert",
+                    "buttonLink": "#contact",
+                    "iconUrl": "",
+                    "iconAlt": "Accounting"
+                },
+                {
+                    "title": "Healthcare",
+                    "description": "Healthcare organizations require robust, secure, and compliant IT infrastructure. Our specialized solutions ensure patient data protection while maintaining operational efficiency and regulatory compliance.",
+                    "buttonText": "Talk to an expert",
+                    "buttonLink": "#contact",
+                    "iconUrl": "",
+                    "iconAlt": "Healthcare"
+                },
+                {
+                    "title": "Legal",
+                    "description": "Law firms need secure document management, reliable communication systems, and robust backup solutions. We provide tailored IT services that protect sensitive client information.",
+                    "buttonText": "Talk to an expert",
+                    "buttonLink": "#contact",
+                    "iconUrl": "",
+                    "iconAlt": "Legal"
+                },
+                {
+                    "title": "Manufacturing",
+                    "description": "Manufacturing companies require integrated systems that connect production, inventory, and management processes. Our solutions optimize efficiency while maintaining security.",
+                    "buttonText": "Talk to an expert",
+                    "buttonLink": "#contact",
+                    "iconUrl": "",
+                    "iconAlt": "Manufacturing"
+                },
+                {
+                    "title": "Education",
+                    "description": "Educational institutions need scalable IT infrastructure that supports both in-person and remote learning. We provide solutions that enhance the learning experience.",
+                    "buttonText": "Talk to an expert",
+                    "buttonLink": "#contact",
+                    "iconUrl": "",
+                    "iconAlt": "Education"
+                },
+                {
+                    "title": "Retail",
+                    "description": "Retail businesses need integrated POS systems, inventory management, and customer data protection. Our solutions help streamline operations and enhance customer experience.",
+                    "buttonText": "Talk to an expert",
+                    "buttonLink": "#contact",
+                    "iconUrl": "",
+                    "iconAlt": "Retail"
+                }
+            ]
+        }
+    },
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

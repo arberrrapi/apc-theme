@@ -1,0 +1,34 @@
+{
+  "apiVersion": 2,
+  "name": "apc-theme/our-team",
+  "title": "Our Team",
+  "category": "apc-blocks",
+  "icon": "groups",
+  "description": "Display team members with their photos, names, and titles.",
+  "supports": {
+    "align": ["wide", "full"],
+    "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Our Team"
+    },
+    "description": {
+      "type": "string",
+      "default": "Meet the talented professionals behind our success."
+    },
+    "teamMembers": {
+      "type": "array",
+      "default": [
+        {
+          "image": "",
+          "name": "",
+          "title": ""
+        }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

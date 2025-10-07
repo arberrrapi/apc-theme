@@ -1,0 +1,31 @@
+{
+  "apiVersion": 2,
+  "name": "apc-theme/featured-about-hero",
+  "title": "Featured About Hero",
+  "category": "layout",
+  "icon": "star-filled",
+  "description": "A hero block with alternating image and text chips, as seen in the About section.",
+  "supports": {
+    "align": ["wide", "full"],
+    "html": false
+  },
+  "attributes": {
+    "chips": {
+      "type": "array",
+      "default": [
+        { "type": "image", "url": "", "alt": "" },
+        { "type": "text", "text": "Solving" },
+        { "type": "image", "url": "", "alt": "" },
+        { "type": "text", "text": "business" },
+        { "type": "text", "text": "challenges" },
+        { "type": "text", "text": "using" },
+        { "type": "text", "text": "Microsoft" },
+        { "type": "image", "url": "", "alt": "" },
+        { "type": "text", "text": "technology" },
+        { "type": "text", "text": "for over 25 years" }
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

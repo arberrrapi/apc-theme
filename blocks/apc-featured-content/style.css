@@ -1,0 +1,213 @@
+/* APC Featured Content Block Styles */
+.apc-featured-content-block {
+  padding: 80px 0;
+}
+
+.featured-content-container {
+  margin: 0 auto;
+}
+
+.featured-content-wrapper {
+  background: white;
+  border-radius: 25px;
+  padding: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+/* Gradient border effect */
+.featured-content-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color, #7055EE) 0%,
+    var(--brand-color, #7055EE) 100%
+  );
+  border-radius: 25px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  z-index: 1;
+}
+
+/* Content positioning */
+.featured-content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  order: 1;
+  padding: 40px;
+}
+
+.featured-content-image {
+  position: relative;
+  z-index: 0;
+  order: 2;
+  overflow: hidden;
+}
+
+/* Reverse columns layout */
+.reverse-columns .featured-content-text {
+  order: 2;
+}
+
+.reverse-columns .featured-content-image {
+  order: 1;
+}
+
+/* Title styles */
+.featured-title {
+  color: var(--brand-color, #7055EE);
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+/* Description styles */
+.featured-description {
+  color: var(--text-color, #333);
+  margin: 0 0 40px 0;
+}
+
+/* Button styles */
+.featured-btn {
+  color: var(--brand-color, #7055EE);
+  padding: 15px 30px;
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, var(--secondary-color, #7055EE), var(--brand-color, #7055EE)) border-box;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  will-change: transform, background;
+}
+
+.featured-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color, #7055EE),
+    var(--brand-color, #7055EE)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.featured-btn:hover {
+  color: white;
+}
+
+.featured-btn:hover::after {
+  opacity: 1;
+}
+
+.featured-btn:active {
+  transform: scale(0.98);
+  transition-duration: 0.1s;
+}
+
+/* Image styles */
+.featured-content-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.featured-image-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  background: #f8f9fa;
+  border: 2px dashed #ddd;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .featured-content-text {
+    padding: 40px;
+  }
+
+  .featured-title {
+  }
+}
+
+@media (max-width: 768px) {
+  .apc-featured-content-block {
+    padding: 40px 0;
+  }
+
+  .featured-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: auto;
+  }
+
+  .featured-content-text {
+    order: 1 !important;
+    padding: 30px 20px;
+  }
+
+  .featured-content-image {
+    order: 2 !important;
+  }
+
+  .featured-title {
+    margin-bottom: 15px;
+  }
+
+  .featured-description {
+    margin-bottom: 25px;
+  }
+
+  .featured-content-image img,
+  .featured-image-placeholder {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-content-text {
+    padding: 20px 15px !important;
+  }
+
+  .featured-title {
+  }
+
+  .featured-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}

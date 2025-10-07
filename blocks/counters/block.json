@@ -1,0 +1,52 @@
+{
+    "apiVersion": 2,
+    "name": "apc/counters",
+    "title": "Counters",
+    "category": "apc-blocks",
+    "icon": "chart-bar",
+    "description": "Display up to four counter columns with numbers and subtitles.",
+    "keywords": ["counters", "stats", "numbers", "apc"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false
+    },
+    "attributes": {
+        "counter1Number": {
+            "type": "string",
+            "default": "100"
+        },
+        "counter1Subtitle": {
+            "type": "string",
+            "default": "Projects Completed"
+        },
+        "counter2Number": {
+            "type": "string",
+            "default": "50"
+        },
+        "counter2Subtitle": {
+            "type": "string",
+            "default": "Happy Clients"
+        },
+        "counter3Number": {
+            "type": "string",
+            "default": "25"
+        },
+        "counter3Subtitle": {
+            "type": "string",
+            "default": "Years Experience"
+        },
+        "counter4Number": {
+            "type": "string",
+            "default": "10"
+        },
+        "counter4Subtitle": {
+            "type": "string",
+            "default": "Team Members"
+        },
+        "columnsCount": {
+            "type": "number",
+            "default": 4
+        }
+    }
+}

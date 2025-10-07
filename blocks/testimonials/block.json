@@ -1,0 +1,39 @@
+{
+    "apiVersion": 2,
+    "name": "apc/testimonials",
+    "title": "Testimonials",
+    "category": "apc-blocks",
+    "icon": "format-quote",
+    "description": "Display customer testimonials from SmileBack API with sliding carousel.",
+    "keywords": ["testimonials", "reviews", "smileback", "carousel", "slider"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "What Our Clients Say"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Real feedback from companies we serve"
+        },
+        "statsText": {
+            "type": "string",
+            "default": "Trusted by 500+ companies worldwide"
+        },
+        "autoSlide": {
+            "type": "boolean",
+            "default": true
+        },
+        "slideInterval": {
+            "type": "number",
+            "default": 20
+        }
+    },
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

@@ -1,0 +1,33 @@
+{
+    "apiVersion": 2,
+    "name": "apc/button",
+    "title": "APC Button",
+    "category": "apc-blocks",
+    "icon": "button",
+    "description": "A customizable APC-branded button with consistent styling.",
+    "keywords": ["button", "link", "cta", "apc"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["left", "center", "right"]
+    },
+    "attributes": {
+        "text": {
+            "type": "string",
+            "default": "Click Here"
+        },
+        "url": {
+            "type": "string",
+            "default": ""
+        },
+        "linkTarget": {
+            "type": "string",
+            "default": "_self"
+        },
+        "alignment": {
+            "type": "string",
+            "default": "left"
+        }
+    }
+}

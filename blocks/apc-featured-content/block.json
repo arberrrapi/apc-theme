@@ -1,0 +1,54 @@
+{
+    "apiVersion": 2,
+    "name": "apc/featured-content",
+    "title": "APC Featured Content",
+    "category": "apc-blocks",
+    "icon": "welcome-view-site",
+    "description": "A featured content block with image, title, description and button with gradient border.",
+    "keywords": ["featured", "content", "image", "cta"],
+    "supports": {
+        "align": ["wide", "full"],
+        "anchor": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Featured Content Title"
+        },
+        "description": {
+            "type": "string",
+            "default": "Add your description here. This content will be displayed alongside your featured image."
+        },
+        "buttonText": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "buttonLink": {
+            "type": "string",
+            "default": ""
+        },
+        "buttonPage": {
+            "type": "number",
+            "default": 0
+        },
+        "buttonType": {
+            "type": "string",
+            "default": "url"
+        },
+        "imageUrl": {
+            "type": "string",
+            "default": ""
+        },
+        "imageAlt": {
+            "type": "string",
+            "default": ""
+        },
+        "reverseColumns": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "textdomain": "apc-theme",
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

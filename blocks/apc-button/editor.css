@@ -1,0 +1,90 @@
+/* APC Button Block - Editor Styles */
+
+/* Make buttons look like frontend in the editor */
+.wp-block-apc-button .apc-button {
+    background: var(--brand-color, #7055EE);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transform: translateZ(0);
+    will-change: transform, background;
+    --shimmer-x: 50%;
+    --shimmer-y: 50%;
+}
+
+.wp-block-apc-button .apc-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle 80px at var(--shimmer-x, 50%) var(--shimmer-y, 50%),
+        rgba(255, 255, 255, 0.3) 0%,
+        transparent 70%
+    );
+    transform: scale(0);
+    transition: transform 0.2s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.wp-block-apc-button .apc-button:hover::before {
+    transform: scale(1);
+}
+
+.wp-block-apc-button .apc-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        var(--secondary-color, #7055EE),
+        var(--brand-color, #7055EE)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.wp-block-apc-button .apc-button:hover {
+    color: white;
+}
+
+.wp-block-apc-button .apc-button:hover::after {
+    opacity: 1;
+}
+
+.wp-block-apc-button .apc-button:active {
+    transform: scale(0.98);
+    transition-duration: 0.1s;
+}
+
+/* Button wrapper alignment */
+.wp-block-apc-button .apc-button-wrapper.text-left {
+    text-align: left;
+}
+
+.wp-block-apc-button .apc-button-wrapper.text-center {
+    text-align: center;
+}
+
+.wp-block-apc-button .apc-button-wrapper.text-right {
+    text-align: right;
+}

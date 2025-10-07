@@ -1,0 +1,55 @@
+{
+    "apiVersion": 2,
+    "name": "apc/cta",
+    "title": "APC CTA",
+    "category": "apc-blocks",
+    "icon": "megaphone",
+    "description": "Call-to-action section with contact form and company benefits.",
+    "keywords": ["cta", "contact", "form", "benefits", "call to action"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "contactLabel": {
+            "type": "string",
+            "default": "Contact Us"
+        },
+        "title": {
+            "type": "string",
+            "default": "Partner with us for comprehensive IT"
+        },
+        "description": {
+            "type": "string",
+            "default": "We're happy to answer any questions you may have and help you determine which of our services best fit your needs."
+        },
+        "benefitsTitle": {
+            "type": "string",
+            "default": "Your Benefits"
+        },
+        "nextStepsTitle": {
+            "type": "string",
+            "default": "What happens next?"
+        },
+        "formTitle": {
+            "type": "string",
+            "default": "Partner with APC today"
+        },
+        "submitButtonText": {
+            "type": "string",
+            "default": "Submit"
+        },
+        "gravityFormId": {
+            "type": "string",
+            "default": ""
+        },
+        "useGravityForm": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

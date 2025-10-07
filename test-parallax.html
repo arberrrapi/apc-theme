@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APC Image Parallax Test</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .spacer {
+            height: 100vh;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        /* Copy the APC Image block styles */
+        .wp-block-apc-image {
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+            display: block;
+            border-radius: 25px;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .wp-block-apc-image img {
+            width: 100%;
+            height: 120%;
+            object-fit: cover;
+            object-position: top center;
+            transform-origin: top center;
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+        }
+    </style>
+</head>
+<body>
+    <div class="spacer">Scroll down to see the parallax effect</div>
+    
+    <div class="wp-block-apc-image" data-parallax-speed="0.5">
+        <img src="assets/img/site/what_we_do.png" alt="Test Image">
+    </div>
+    
+    <div class="spacer">Continue scrolling</div>
+    
+    <div class="wp-block-apc-image" data-parallax-speed="0.3">
+        <img src="assets/img/site/our_expert.png" alt="Test Image 2">
+    </div>
+    
+    <div class="spacer">End of test</div>
+
+    <script>
+        // Copy the simplified parallax script
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Testing APC Image parallax effect');
+            
+            function initParallax() {
+                const parallaxImages = document.querySelectorAll('.wp-block-apc-image img');
+                
+                if (parallaxImages.length === 0) {
+                    console.log('No parallax images found');
+                    return;
+                }
+                
+                console.log('Found', parallaxImages.length, 'parallax images');
+                
+                function updateParallax() {
+                    parallaxImages.forEach(img => {
+                        const container = img.closest('.wp-block-apc-image');
+                        if (!container) return;
+                        
+                        const speed = parseFloat(container.dataset.parallaxSpeed) || 0.5;
+                        const rect = container.getBoundingClientRect();
+                        const isVisible = rect.bottom >= 0 && rect.top <= window.innerHeight;
+                        
+                        if (isVisible) {
+                            const yPos = rect.top * speed;
+                            img.style.transform = `translateY(${yPos}px)`;
+                        }
+                    });
+                }
+                
+                let isScrolling = false;
+                
+                function onScroll() {
+                    if (!isScrolling) {
+                        requestAnimationFrame(() => {
+                            updateParallax();
+                            isScrolling = false;
+                        });
+                        isScrolling = true;
+                    }
+                }
+                
+                window.addEventListener('scroll', onScroll);
+                updateParallax(); // Initial call
+            }
+            
+            initParallax();
+        });
+    </script>
+</body>
+</html>

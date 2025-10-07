@@ -1,0 +1,43 @@
+{
+    "apiVersion": 2,
+    "name": "apc/qa-display",
+    "title": "Q&A Display",
+    "category": "apc-blocks",
+    "icon": "editor-help",
+    "description": "Display Q&A items from selected categories with accordion-style layout.",
+    "keywords": ["qa", "questions", "answers", "faq", "accordion"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Frequently Asked Questions"
+        },
+        "description": {
+            "type": "string",
+            "default": "Find answers to commonly asked questions about our services."
+        },
+        "selectedCategories": {
+            "type": "array",
+            "default": []
+        },
+        "showAllCategories": {
+            "type": "boolean",
+            "default": true
+        },
+        "itemsPerPage": {
+            "type": "number",
+            "default": 10
+        },
+        "accordionStyle": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}

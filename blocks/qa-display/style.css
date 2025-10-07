@@ -1,0 +1,236 @@
+/* Q&A Display Block Styles */
+.qa-display-wrapper {
+  padding: 80px 0;
+}
+
+.qa-display-header {
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.qa-display-title {
+  font-size: 55px;
+  font-weight: 7=900;
+  color: var(--brand-color, #7055EE);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.qa-display-description {
+  color: var(--text-color, #666);
+  font-weight: 600;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.qa-display-content {
+  margin: 0 auto;
+}
+
+/* Accordion Style */
+.qa-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.qa-accordion-item {
+  background: linear-gradient(135deg, var(--brand-color, #7055EE), var(--secondary-color, #7055EE));
+  border-radius: 27px;
+  padding: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.qa-accordion-item-inner {
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.qa-accordion-item:hover {
+  transform: scale(1.02);
+}
+
+.qa-accordion-header {
+  padding: 24px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+
+.qa-accordion-header::after {
+  content: '\f067';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--brand-color, #7055EE);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.qa-accordion-item.active .qa-accordion-header::after {
+  content: '\f068';
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.qa-accordion-header p {
+  margin: 0;
+  color: var(--text-color, #333);
+  padding-right: 40px;
+}
+
+.qa-accordion-content {
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.qa-accordion-item.active .qa-accordion-content {
+  max-height: 1000px;
+  padding: 24px;
+}
+
+.qa-accordion-content .qa-answer-text {
+  color: var(--text-color, #555);
+}
+
+.qa-accordion-content .qa-answer-text p {
+}
+
+.qa-accordion-content .qa-answer-text p:last-child {
+  margin-bottom: 0;
+}
+
+.qa-accordion-content .qa-answer-text ul,
+.qa-accordion-content .qa-answer-text ol {
+  margin: 16px 0;
+  padding-left: 20px;
+}
+
+.qa-accordion-content .qa-answer-text li {
+  margin-bottom: 8px;
+}
+
+/* List Style (Non-accordion) */
+.qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.qa-list-item {
+  background: white;
+  border: 1px solid #e1e5e9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.qa-list-item .qa-question {
+  padding: 24px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.qa-list-item .qa-question p {
+  margin: 0;
+  font-size: 20px;
+  color: var(--text-color, #333);
+  line-height: 1.4;
+}
+
+.qa-list-item .qa-answer {
+  padding: 24px;
+  background: white;
+}
+
+.qa-list-item .qa-answer-text {
+  color: var(--text-color, #555);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Loading and Empty States */
+.no-qa-found {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-color, #666);
+  font-size: 18px;
+  font-style: italic;
+}
+
+/* Category Filter (if added later) */
+.qa-category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.qa-category-filter {
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border: 1px solid #e1e5e9;
+  border-radius: 20px;
+  color: var(--text-color, #666);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.qa-category-filter:hover,
+.qa-category-filter.active {
+  background: var(--brand-color, #7055EE);
+  color: white;
+  border-color: var(--brand-color, #7055EE);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .qa-display-wrapper {
+    padding: 60px 0;
+  }
+
+  .qa-display-title {
+    font-size: 36px;
+  }
+
+  .qa-display-description {
+    font-size: 18px;
+  }
+
+  .qa-display-header {
+    margin-bottom: 40px;
+  }
+
+  .qa-accordion-header,
+  .qa-list-item .qa-question,
+  .qa-list-item .qa-answer {
+    padding: 20px;
+  }
+
+  .qa-accordion-content.active {
+    padding: 20px;
+  }
+
+  .qa-accordion-header p,
+  .qa-list-item .qa-question p {
+    font-size: 18px;
+    padding-right: 30px;
+  }
+
+  .qa-accordion-header::after {
+    right: 20px;
+    font-size: 14px;
+  }
+}

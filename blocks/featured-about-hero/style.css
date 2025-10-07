@@ -1,0 +1,58 @@
+.hero-row .row1{
+
+}
+
+.hero-row .image{
+    width: 200px;
+    display: block;
+    float: left;
+    height: 130px;
+        margin-right: 15px;
+}
+
+.hero-row .image img{
+    width: 100%;
+
+    border-radius: 25px;
+}
+.hero-row h1{
+    font-size: 76px;
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.hero-row .chip{
+    background-color: var(--brand-color);
+    color: white;
+    padding: 30px 40px;
+    border-radius: 25px;
+    line-height: 1;
+    height: 100%;
+    margin-bottom: 15px;
+        margin-right: 15px;
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-row .image img{
+        border-radius: 15px;
+    }
+
+    .hero-row .image{
+        width: 85px;
+        height: 60px;
+        margin-right: 5px;
+    }
+    .hero-row h1 {
+    font-size: 30px;;
+    }
+    .hero-row .chip{
+    padding: 14px 10px;
+    border-radius: 15px;
+    margin: 0px 5px 5px 0px;
+    }
+
+}

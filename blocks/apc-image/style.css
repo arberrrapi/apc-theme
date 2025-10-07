@@ -1,0 +1,269 @@
+/* APC Image Block Styles */
+.wp-block-apc-image {
+  margin: 40px 0;
+  width: 100%;
+}
+
+.apc-image-container {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.apc-image-wrapper {
+  width: 100%;
+  height: 600px;
+  display: block;
+  overflow: hidden;
+  border-radius: 25px;
+  background: #f8f9fa;
+  position: relative;
+}
+
+.apc-image-wrapper img {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 25px;
+  display: block;
+  transition: transform 0.1s linear;
+  transform-origin: top center;
+  will-change: transform;
+}
+
+/* Parallax specific styles */
+.apc-parallax-container {
+  perspective: 1000px;
+}
+
+.apc-parallax-image {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.apc-parallax-active {
+  transition: transform 0.1s ease-out !important;
+}
+
+/* Remove hover effects to keep only scroll-based parallax */
+
+.apc-image-caption {
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+  color: var(--text-color, #666);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Editor Styles */
+.apc-image-block-editor {
+  margin: 20px 0;
+}
+
+.apc-image-placeholder {
+  width: 100%;
+  height: 600px;
+  border: 2px dashed #ddd;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.apc-image-placeholder:hover {
+  border-color: #7055EE;
+  background: #f0f0ff;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: #666;
+  max-width: 400px;
+  padding: 40px;
+}
+
+.placeholder-content h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.placeholder-content p {
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+}
+
+.apc-image-preview {
+  position: relative;
+}
+
+.image-controls-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.apc-image-preview:hover .image-controls-overlay {
+  opacity: 1;
+}
+
+.image-controls {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.image-controls .button {
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+.image-controls .button-secondary {
+  background: white;
+  color: #333;
+}
+
+.image-controls .button-secondary:hover {
+  background: #f0f0f0;
+}
+
+.apc-image-caption-input {
+  margin-top: 15px;
+}
+
+.apc-image-caption-input .rich-text {
+  border: 1px solid transparent;
+  padding: 8px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.apc-image-caption-input .rich-text:focus {
+  border-color: #7055EE;
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .apc-image-container,
+  .apc-image-wrapper,
+  .apc-image-placeholder {
+    height: 400px;
+  }
+  
+  .apc-image-wrapper {
+    border-radius: 20px;
+  }
+  
+  .apc-image-wrapper img {
+    border-radius: 20px;
+  }
+  
+  .apc-image-placeholder {
+    border-radius: 20px;
+  }
+  
+  .placeholder-content {
+    padding: 20px;
+  }
+  
+  .placeholder-content h3 {
+    font-size: 20px;
+  }
+  
+  .apc-image-caption {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apc-image-container,
+  .apc-image-wrapper,
+  .apc-image-placeholder {
+    height: 300px;
+  }
+  
+  .apc-image-wrapper {
+    border-radius: 15px;
+  }
+  
+  .apc-image-wrapper img {
+    border-radius: 15px;
+  }
+  
+  .apc-image-placeholder {
+    border-radius: 15px;
+  }
+  
+  .placeholder-content h3 {
+    font-size: 18px;
+  }
+  
+  .image-controls-overlay {
+    position: relative;
+    top: auto;
+    right: auto;
+    opacity: 1;
+    margin-top: 10px;
+  }
+  
+  .image-controls {
+    background: transparent;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .image-controls .button {
+    background: #7055EE;
+    color: white;
+  }
+
+  /* Disable parallax on small screens for performance */
+  .apc-parallax-image {
+    height: 100% !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .apc-parallax-image {
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .apc-image-wrapper img {
+    transition: none !important;
+  }
+}
+
+/* Performance optimizations */
+.wp-block-apc-image {
+  contain: layout style;
+}
+
+.apc-image-wrapper {
+  contain: layout;
+}
+
+/* GPU acceleration */
+.apc-parallax-image {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}

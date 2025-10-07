@@ -1,0 +1,199 @@
+/* APC Feature Block Styles */
+.apc-feature-block {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
+}
+
+.apc-feature-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styles */
+.feature-icon {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.feature-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Content Styles */
+.feature-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-color, #333);
+  line-height: 1.6;
+}
+
+.feature-content p {
+  font-size: 16px;
+  margin: 0 0 20px 0;
+  color: var(--text-color, #333);
+}
+
+.feature-content p:last-child {
+  margin-bottom: 0;
+}
+
+.feature-content h1,
+.feature-content h2,
+.feature-content h3,
+.feature-content h4,
+.feature-content h5,
+.feature-content h6 {
+  color: var(--brand-color, #7055EE);
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.feature-content h3 {
+  font-size: 24px;
+}
+
+.feature-content h4 {
+  font-size: 20px;
+}
+
+.feature-content h5 {
+  font-size: 18px;
+}
+
+.feature-content h6 {
+  font-size: 16px;
+}
+
+/* Link Styles */
+.feature-content a {
+  color: var(--brand-color, #7055EE);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.feature-content a:hover {
+  color: var(--secondary-color, #5a47d1);
+  text-decoration: underline;
+}
+
+/* Text Formatting */
+.feature-content strong {
+  font-weight: 700;
+  color: var(--brand-color, #7055EE);
+}
+
+.feature-content em {
+  font-style: italic;
+  color: var(--secondary-color, #5a47d1);
+}
+
+/* Lists */
+.feature-content ul,
+.feature-content ol {
+  text-align: left;
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.feature-content li {
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .apc-feature-block {
+    padding: 30px 20px;
+    min-height: 250px;
+  }
+
+  .feature-icon {
+    margin-bottom: 20px;
+  }
+
+  .feature-icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .feature-content p {
+    font-size: 15px;
+  }
+
+  .feature-content h3 {
+    font-size: 20px;
+  }
+
+  .feature-content h4 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apc-feature-block {
+    padding: 25px 15px;
+    min-height: 200px;
+  }
+
+  .feature-icon {
+    margin-bottom: 15px;
+  }
+
+  .feature-icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .feature-content p {
+    font-size: 14px;
+  }
+
+  .feature-content h3 {
+    font-size: 18px;
+  }
+}
+
+/* Grid Layout Support - when used in columns */
+.wp-block-columns .apc-feature-block {
+  margin-bottom: 0;
+}
+
+/* Animation for icon when no image is set */
+.feature-icon:empty::before {
+  content: '📋';
+  font-size: 60px;
+  opacity: 0.3;
+  display: block;
+}
+
+/* Editor Specific Styles */
+.apc-feature-block-preview {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.apc-feature-block-preview .feature-content-editor .wp-block-rich-text__editable {
+  outline: none;
+}
+
+.apc-feature-block-preview .feature-content-editor .wp-block-rich-text__editable:focus {
+  box-shadow: 0 0 0 2px var(--brand-color, #7055EE);
+}

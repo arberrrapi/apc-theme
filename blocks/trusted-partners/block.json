@@ -1,0 +1,66 @@
+{
+    "apiVersion": 2,
+    "name": "apc/trusted-partners",
+    "title": "Trusted Partners",
+    "category": "apc-blocks",
+    "icon": "admin-users",
+    "description": "Display partner logos with customizable content and layout.",
+    "keywords": ["partners", "logos", "trusted", "companies", "apc"],
+    "version": "1.0.0",
+    "textdomain": "apc-theme",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Trusted partners"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Working with the best"
+        },
+        "backgroundImage": {
+            "type": "string",
+            "default": ""
+        },
+        "partners": {
+            "type": "array",
+            "default": [
+                {
+                    "name": "Microsoft",
+                    "logo": "microsoft.png",
+                    "url": ""
+                },
+                {
+                    "name": "Cisco",
+                    "logo": "cisco.png", 
+                    "url": ""
+                },
+                {
+                    "name": "SonicWall",
+                    "logo": "sonicwal.png",
+                    "url": ""
+                },
+                {
+                    "name": "Fortinet",
+                    "logo": "fortinet.png",
+                    "url": ""
+                },
+                {
+                    "name": "Azure",
+                    "logo": "azure.png",
+                    "url": ""
+                },
+                {
+                    "name": "Darktrace",
+                    "logo": "Darktrace_logo logo.png",
+                    "url": ""
+                }
+            ]
+        }
+    },
+    "editorScript": "file:./block.js",
+    "style": "file:./style.css"
+}
