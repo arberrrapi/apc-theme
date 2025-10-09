@@ -15,6 +15,7 @@ if (!defined('ABSPATH')) {
  */
 function apc_register_blocks() {
     // Include block rendering functions
+    require_once get_template_directory() . '/blocks/hero/block.php';
     require_once get_template_directory() . '/blocks/tailored-solutions/block.php';
     require_once get_template_directory() . '/blocks/it-challenges/block.php';
     require_once get_template_directory() . '/blocks/trusted-partners/block.php';
@@ -30,6 +31,11 @@ function apc_register_blocks() {
     require_once get_template_directory() . '/blocks/apc-image/block.php';
     require_once get_template_directory() . '/blocks/apc-featured-content/block.php';
     require_once get_template_directory() . '/blocks/apc-feature-block/block.php';
+    
+    // Register Hero block
+    register_block_type(get_template_directory() . '/blocks/hero', array(
+        'render_callback' => 'apc_render_hero_block'
+    ));
     
     // Register Tailored Solutions block
     register_block_type(get_template_directory() . '/blocks/tailored-solutions/block.json', array(

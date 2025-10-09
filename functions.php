@@ -51,6 +51,30 @@ function apc_theme_scripts() {
 add_action('wp_enqueue_scripts', 'apc_theme_scripts');
 
 /**
+ * Enqueue Hero Block Assets
+ */
+function apc_enqueue_hero_block_assets() {
+    // Always load on front page, or if block is detected
+    if (is_front_page() || (has_blocks() && has_block('apc/hero'))) {
+        wp_enqueue_style(
+            'apc-hero-style',
+            get_template_directory_uri() . '/blocks/hero/style.css',
+            array(),
+            '1.0.1'
+        );
+        
+        wp_enqueue_script(
+            'apc-hero-script',
+            get_template_directory_uri() . '/blocks/hero/hero.js',
+            array(),
+            '1.0.1',
+            true
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'apc_enqueue_hero_block_assets');
+
+/**
  * Register widget areas
  */
 function apc_theme_widgets_init() {
@@ -302,90 +326,6 @@ function apc_enqueue_our_team_frontend_assets() {
 add_action('wp_enqueue_scripts', 'apc_enqueue_our_team_frontend_assets');
 
 /**
- * Add widget styles
- */
-function apc_widget_styles() {
-    ?>
-    <style>
-    /* Services Widget Styles */
-    .apc-services-widget {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .widget-service-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 12px 0;
-        border-bottom: 1px solid #eee;
-    }
-    
-    .widget-service-item:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-    }
-    
-    .widget-service-icon {
-        flex: 0 0 auto;
-        font-size: 1.5rem;
-    }
-    
-    .widget-service-content {
-        flex: 1;
-    }
-    
-    .widget-service-content h4 {
-        margin: 0 0 5px 0;
-        font-size: 1rem;
-        line-height: 1.3;
-    }
-    
-    .widget-service-content h4 a {
-        color: var(--primary-blue, #1a365d);
-        text-decoration: none;
-    }
-    
-    .widget-service-content h4 a:hover {
-        color: var(--accent-blue, #3182ce);
-    }
-    
-    .widget-service-content p {
-        margin: 0;
-        font-size: 0.9rem;
-        color: #666;
-        line-height: 1.4;
-    }
-    
-    /* Navigation Menu Styles */
-    .no-menu-message {
-        background: #fff3cd;
-        border: 1px solid #ffeaa7;
-        padding: 15px;
-        margin: 20px 0;
-        border-radius: 4px;
-        text-align: center;
-    }
-    
-    .no-menu-message p {
-        margin: 0;
-        color: #856404;
-    }
-    
-    .no-menu-message a {
-        color: #0073aa;
-        text-decoration: none;
-    }
-    
-    .no-menu-message a:hover {
-        text-decoration: underline;
-    }
-    </style>
-    <?php
-}
-
-/**
  * Smileback Auto-Refresh Cron
  */
 
@@ -420,7 +360,6 @@ function smileback_do_auto_refresh() {
         $api->get_reviews(); // This will refresh cache
     }
 }
-add_action('wp_head', 'apc_widget_styles');
 
 /**
  * Modify posts per page for blog page
@@ -433,3 +372,29 @@ function apc_modify_blog_posts_per_page($query) {
     }
 }
 add_action('pre_get_posts', 'apc_modify_blog_posts_per_page');
+
+/**
+ * Adds a '/resources/' prefix to the URLs of default posts.
+ */
+function add_resources_prefix_to_posts($permalink, $post) {
+    // Check if the post type is 'post' before adding the prefix.
+    if ('post' === $post->post_type) {
+        // Replace the site URL with the site URL + /resources/
+        $permalink = home_url('/resources' . '/' . basename($permalink) . '/');
+    }
+    return $permalink;
+}
+add_filter('post_link', 'add_resources_prefix_to_posts', 10, 2);
+
+/**
+ * Tells WordPress how to understand the new URL structure.
+ */
+function add_resources_rewrite_rule() {
+    // Matches 'resources/any-post-slug' and directs it to the correct post.
+    add_rewrite_rule(
+        'resources/([^/]+)/?$',
+        'index.php?name=$matches[1]',
+        'top'
+    );
+}
+add_action('init', 'add_resources_rewrite_rule');

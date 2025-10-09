@@ -1,0 +1,123 @@
+/* Hero Block Editor Styles */
+.hero-block-editor {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  margin: 20px 0;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.hero-preview {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-preview .hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-preview .hero-text {
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-preview .hero-line {
+  color: white;
+}
+
+.hero-preview .hero-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+}
+
+.hero-preview .cube-container {
+  height: 60px;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-preview .cube-face {
+  position: absolute;
+  height: 60px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 42px;
+  white-space: nowrap;
+  padding: 0 20px;
+  min-width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-preview .cube-face.active {
+  z-index: 10;
+  opacity: 1;
+}
+
+.hero-preview .cube-face.next {
+  opacity: 0.3;
+}
+
+.editor-note {
+  margin-top: 20px;
+  padding: 10px;
+  background: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  font-size: 14px;
+  border-radius: 0 4px 4px 0;
+}
+
+.editor-note p {
+  margin: 0;
+  color: #1976d2;
+}
+
+/* Inspector Controls Styling */
+.block-editor-block-inspector .components-panel__body {
+  border-top: 1px solid #ddd;
+}
+
+.block-editor-block-inspector h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1e1e1e;
+}
+
+.block-editor-block-inspector h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 16px 0 8px 0;
+  color: #1e1e1e;
+}
+
+.block-editor-block-inspector .components-text-control__input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.block-editor-block-inspector .components-text-control__input:focus {
+  border-color: #007cba;
+  box-shadow: 0 0 0 1px #007cba;
+  outline: none;
+}

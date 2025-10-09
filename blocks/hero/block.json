@@ -1,0 +1,52 @@
+{
+  "apiVersion": 2,
+  "name": "apc/hero",
+  "title": "APC Hero Section",
+  "category": "apc-blocks",
+  "icon": "welcome-view-site",
+  "description": "Hero section with animated cube text and floating icons",
+  "keywords": ["hero", "banner", "animation", "cube"],
+  "attributes": {
+    "heroLine1": {
+      "type": "string",
+      "default": "Using APC for"
+    },
+    "heroLine2": {
+      "type": "string", 
+      "default": "in your business"
+    },
+    "cubeText1": {
+      "type": "string",
+      "default": "cloud solutions"
+    },
+    "cubeText2": {
+      "type": "string",
+      "default": "improved performance"
+    },
+    "cubeText3": {
+      "type": "string",
+      "default": "optimizing processes"
+    },
+    "cubeText4": {
+      "type": "string",
+      "default": "enterprise-grade security"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "style": "file:./style.css",
+  "editorStyle": "file:./editor.css",
+  "script": "file:./hero.js",
+  "example": {
+    "attributes": {
+      "heroLine1": "Using APC for",
+      "heroLine2": "in your business",
+      "cubeText1": "cloud solutions",
+      "cubeText2": "improved performance",
+      "cubeText3": "optimizing processes",
+      "cubeText4": "enterprise-grade security"
+    }
+  }
+}

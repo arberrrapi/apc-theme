@@ -7,55 +7,17 @@
 
 get_header(); ?>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-icons-container">
-                <!-- Cloud Solutions Icons -->
-                <div class="hero-icons cloud-icons">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cloud/icon1.png" alt="Cloud Icon 1" class="hero-icon icon-top-left" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cloud/icon2.png" alt="Cloud Icon 2" class="hero-icon icon-top-right" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cloud/icon3.png" alt="Cloud Icon 3" class="hero-icon icon-bottom-left" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cloud/icon4.png" alt="Cloud Icon 4" class="hero-icon icon-bottom-right" />
-                </div>
-
-                <!-- Performance Icons -->
-                <div class="hero-icons performance-icons">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/performance/icon1.png" alt="Performance Icon 1" class="hero-icon icon-top-right" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/performance/icon2.png" alt="Performance Icon 2" class="hero-icon icon-bottom-left" />
-                </div>
-
-                <!-- Processes Icons -->
-                <div class="hero-icons processes-icons">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/processes/icon1.png" alt="Processes Icon 1" class="hero-icon icon-top-left" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/processes/icon2.png" alt="Processes Icon 2" class="hero-icon icon-bottom-right" />
-                </div>
-
-                <!-- Enterprise Icons -->
-                <div class="hero-icons enterprise-icons">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enterprise/icon1.png" alt="Enterprise Icon 1" class="hero-icon icon-top-left" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enterprise/icon2.png" alt="Enterprise Icon 2" class="hero-icon icon-top-right" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enterprise/icon3.png" alt="Enterprise Icon 3" class="hero-icon icon-bottom-left" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/enterprise/icon4.png" alt="Enterprise Icon 4" class="hero-icon icon-bottom-right" />
-                </div>
-            </div>
-
-            <div class="hero-text">
-                <div class="hero-line"><?php echo get_theme_mod('hero_line_1', 'Using APC for'); ?></div>
-                <div class="hero-highlight">
-                    <div class="cube-container">
-                        <div class="cube">
-                            <div class="cube-face"><?php echo get_theme_mod('hero_cube_1', 'cloud solutions'); ?></div>
-                            <div class="cube-face"><?php echo get_theme_mod('hero_cube_2', 'improved performance'); ?></div>
-                            <div class="cube-face"><?php echo get_theme_mod('hero_cube_3', 'optimizing processes'); ?></div>
-                            <div class="cube-face"><?php echo get_theme_mod('hero_cube_4', 'enterprise-grade security'); ?></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-line"><?php echo get_theme_mod('hero_line_2', 'in your business'); ?></div>
-            </div>
-        </div>
-    </section>
+    <!-- Hero Section Block -->
+    <?php 
+    echo apc_render_hero_block(array(
+        'heroLine1' => get_theme_mod('hero_line_1', 'Using APC for'),
+        'heroLine2' => get_theme_mod('hero_line_2', 'in your business'),
+        'cubeText1' => get_theme_mod('hero_cube_1', 'cloud solutions'),
+        'cubeText2' => get_theme_mod('hero_cube_2', 'improved performance'), 
+        'cubeText3' => get_theme_mod('hero_cube_3', 'optimizing processes'),
+        'cubeText4' => get_theme_mod('hero_cube_4', 'enterprise-grade security')
+    )); 
+    ?>
 
     <!-- What We Do Section -->
     <section class="what-we-do">
@@ -154,6 +116,6 @@ get_header(); ?>
     ?>
 
     <!-- APC CTA Section Block -->
-    <?php echo do_blocks('<!-- wp:apc/cta --><!-- /wp:apc/cta -->'); ?>
+    <?php echo do_blocks('<!-- wp:apc/cta {"useGravityForm":true,"gravityFormId":"4"} --><!-- /wp:apc/cta -->'); ?>
 
 <?php get_footer(); ?>
