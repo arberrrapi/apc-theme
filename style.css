@@ -488,7 +488,7 @@ strong {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 1680px;
+  max-width: 900px;
   background: white;
   border-radius: 15px;
   opacity: 0;
@@ -561,9 +561,62 @@ strong {
 
 .mega-menu-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: 1fr 1fr;
   padding: 60px 80px;
+}
+
+.mega-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mega-menu-image-section {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg,#47267D, #7055EE);
+  border-radius: 25px;
+  padding: 40px 30px;
+  text-align: left;
+}
+
+.mega-menu-image-section img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.mega-menu-image-section h5 {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.mega-menu-image-section p {
+  color: white  ;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.mega-menu-image-section .btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid white;
+  font-size: 18px;
+  width: 150px;
+}
+
+.mega-menu-image-section .btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
 }
 
 .mega-menu-column h4 {
@@ -614,6 +667,57 @@ strong {
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Mega Menu Responsive Styles */
+@media (max-width: 1200px) {
+  .mega-menu-container {
+    padding: 50px 60px;
+  }
+  
+  .mega-menu-image-section {
+    padding: 30px 20px;
+  }
+  
+  .mega-menu-image-section img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 991px) {
+  .mega-menu-container {
+    grid-template-columns: 1fr;
+    padding: 40px 30px;
+  }
+  
+  .mega-menu-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .mega-menu-image-section {
+    grid-column: 1 / -1;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mega-menu {
+    display: none !important;
+  }
+  
+  .mega-menu-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .mega-menu-image-section {
+    padding: 20px;
+  }
+  
+  .mega-menu-image-section img {
+    max-width: 180px;
   }
 }
 

@@ -20,6 +20,7 @@ class APC_Walker_Nav_Menu extends Walker_Nav_Menu {
         if ($depth === 0) {
             // First level sub-menus are mega menus
             $output .= '<div class="mega-menu"><div class="mega-menu-container">';
+            $output .= '<div class="mega-menu-content">';
         } elseif ($depth === 1) {
             // Second level sub-menus
             $output .= '<ul>';
@@ -29,7 +30,15 @@ class APC_Walker_Nav_Menu extends Walker_Nav_Menu {
     // End Level
     public function end_lvl(&$output, $depth = 0, $args = null) {
         if ($depth === 0) {
-            $output .= '</div></div>';
+            $output .= '</div>'; // Close mega-menu-content
+            // Add image section placeholder
+            $output .= '<div class="mega-menu-image-section">';
+            // $output .= '<img src="http://localhost:8888/apc/wp-content/uploads/2025/10/apc_non_profit.jpg" alt="Featured Content" />';
+            $output .= '<h5>What a free IT health check?</h5>';
+            $output .= '<p>We analyse your network, identifying any vulnerabilities that could be putting your data at risk. </p>';
+            $output .= '<a href="#" class="btn">Learn More</a>';
+            $output .= '</div>';
+            $output .= '</div></div>'; // Close mega-menu-container and mega-menu
         } elseif ($depth === 1) {
             $output .= '</ul>';
         }
