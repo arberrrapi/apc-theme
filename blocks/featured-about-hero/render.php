@@ -30,6 +30,7 @@ echo '<!-- Featured About Hero Block: ' . count($chips) . ' chips -->';
 <span class="chip">technology</span>
 <span class="image">
     <img src="<?php echo site_url('/wp-content/uploads/2025/10/apc_real_estate.jpg'); ?>" alt=""/>
+</span>
 <span class="chip">for over 25 years</span>
 </h1>
 </div>

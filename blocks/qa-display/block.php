@@ -63,15 +63,9 @@ function apc_render_qa_display_block($attributes) {
             <div class="qa-display-content">
                 <div class="<?php echo $accordion_style ? 'qa-accordion' : 'qa-list'; ?>">
                     <?php while ($qa_query->have_posts()) : $qa_query->the_post();
-                        $question = get_post_meta(get_the_ID(), '_qa_question', true);
-                        $answer = get_post_meta(get_the_ID(), '_qa_answer', true);
-                        $post_title = get_the_title();
-                        
-                        // Use question field if available, otherwise use post title
-                        $display_question = !empty($question) ? $question : $post_title;
-                        
-                        // Use answer field if available, otherwise use post content
-                        $display_answer = !empty($answer) ? $answer : get_the_content();
+                        // Always use post title as question and post content as answer
+                        $display_question = get_the_title();
+                        $display_answer = get_the_content();
                         
                         if (empty($display_question)) continue;
                     ?>
