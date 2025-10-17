@@ -62,7 +62,7 @@
 
 .qa-accordion-header::after {
   content: '\f067';
-  font-family: 'Font Awesome 6 Free';
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Pro', 'FontAwesome';
   font-weight: 900;
   position: absolute;
   right: 24px;

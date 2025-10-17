@@ -136,7 +136,7 @@
 
 .reason-description ul.check li::before {
   content: '\f058';
-  font-family: 'Font Awesome 6 Free';
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Pro', 'FontAwesome';
   font-weight: 900;
   color: var(--text-color, #333);
   position: absolute;
