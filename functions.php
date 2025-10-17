@@ -61,14 +61,14 @@ function apc_enqueue_hero_block_assets() {
             'apc-hero-style',
             get_template_directory_uri() . '/blocks/hero/style.css',
             array(),
-            '1.0.1'
+            '1.0.2'
         );
         
         wp_enqueue_script(
             'apc-hero-script',
             get_template_directory_uri() . '/blocks/hero/hero.js',
             array(),
-            '1.0.1',
+            '1.0.2',
             true
         );
     }
