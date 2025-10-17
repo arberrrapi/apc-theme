@@ -574,10 +574,12 @@ strong {
 .mega-menu-image-section {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background: linear-gradient(135deg,#47267D, #7055EE);
   border-radius: 25px;
   padding: 40px 30px;
   text-align: left;
+  min-height: 400px;
 }
 
 .mega-menu-image-section img {
@@ -592,17 +594,16 @@ strong {
   color: white;
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: auto;
 }
 
 .mega-menu-image-section p {
-  color: white  ;
-  line-height: 1.5;
-  margin: 0;
+  color: white;
+  margin: 0 0 20px 0;
 }
 
 .mega-menu-image-section .btn {
-  margin-top: 20px;
+  margin-top: 0;
   padding: 12px 24px;
   color: white;
   text-decoration: none;
