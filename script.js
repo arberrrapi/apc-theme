@@ -47,20 +47,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // back handler: slide out then remove panel to keep DOM clean
     backBtn.addEventListener('click', () => {
+      // Check how many panels exist BEFORE animating
+      const allPanels = drillContainer.querySelectorAll('.mobile-drill-panel');
+      const isRootPanel = allPanels.length === 1;
+      
       panel.style.transform = 'translateX(100%)';
       panel.setAttribute('aria-hidden', 'true');
+      
       // after transition ends, remove panel
       const onEnd = () => {
         panel.removeEventListener('transitionend', onEnd);
         if (panel.parentElement) panel.parentElement.removeChild(panel);
+        
+        // If this was the root panel, just return to the main menu (don't close it)
+        // Only close if user explicitly clicks hamburger or clicks outside
+        if (isRootPanel) {
+          // Just return focus to root menu, keep mobile nav open
+          const mobileNav = document.querySelector('.mobile-nav');
+          if (mobileNav) {
+            const rootMenu = mobileNav.querySelector('.mobile-nav-menu');
+            if (rootMenu) rootMenu.focus();
+          }
+        }
       };
       panel.addEventListener('transitionend', onEnd);
-      // reset focus to root menu
-      const mobileNav = document.querySelector('.mobile-nav');
-      if (mobileNav) {
-        const rootMenu = mobileNav.querySelector('.mobile-nav-menu');
-        if (rootMenu) rootMenu.focus();
-      }
     });
 
     return panel;
@@ -547,13 +557,24 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('click', function (e) {
       // Close mobileNav if it's open and click is outside
       if (mobileNav && mobileNav.classList.contains('open')) {
+        const drillContainer = document.querySelector('.mobile-drillpanels');
+        const clickedInDrill = drillContainer && drillContainer.contains(e.target);
+        
         if (
           !mobileNav.contains(e.target) &&
-          !hamburgerMenu.contains(e.target)
+          !hamburgerMenu.contains(e.target) &&
+          !clickedInDrill
         ) {
           hamburgerMenu.classList.remove('active');
           mobileNav.classList.remove('open');
           document.body.style.overflow = '';
+          
+          // Clean up drill panels when closing
+          if (drillContainer) {
+            while (drillContainer.firstChild) {
+              drillContainer.removeChild(drillContainer.firstChild);
+            }
+          }
         }
         return;
       }

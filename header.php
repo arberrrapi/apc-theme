@@ -87,6 +87,19 @@
                 echo apc_no_menu_message();
             }
             ?>
+            
+            <!-- Mobile Action Buttons -->
+            <div class="mobile-action-buttons">
+                <a href="<?php echo esc_url(get_theme_mod('remote_support_url', '#remote-support')); ?>" class="action-btn mobile-action-btn">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>Remote Support</span>
+                </a>
+                <a href="<?php echo esc_url(get_theme_mod('client_portal_url', '#client-portal')); ?>" class="action-btn mobile-action-btn">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Client Portal</span>
+                </a>
+            </div>
+            
             <!-- Drill panels container (populated by JS) -->
             <div class="mobile-drillpanels" aria-hidden="true">
                 <!-- panels are inserted here dynamically -->

@@ -131,6 +131,43 @@ It includes all the original functionality with WordPress integration.
     display: none;
   }
 
+  /* Mobile Action Buttons */
+  .mobile-action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px 40px;
+    margin-top: 20px;
+  }
+
+  .mobile-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 24px;
+    background: linear-gradient(135deg, var(--brand-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-action-btn:hover,
+  .mobile-action-btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(112, 85, 238, 0.3);
+  }
+
+  .mobile-action-btn i {
+    font-size: 24px;
+  }
+
+  .mobile-action-btn span {
+    flex: 1;
+  }
+
   /* Drilldown panel styles (full-screen panels that slide in) */
   .mobile-drill-panel {
     position: fixed;
@@ -172,7 +209,7 @@ It includes all the original functionality with WordPress integration.
 
   .mobile-drill-list {
     list-style: none;
-    padding: 18px;
+    padding: 40px;
     margin: 0;
     overflow-y: auto;
     flex: 1;
@@ -193,13 +230,13 @@ It includes all the original functionality with WordPress integration.
     background: none;
     border: none;
     width: 100%;
-    font-size: 18px;
+    font-size: 24px;
     text-align: left;
     color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
+    padding: 10px 0;
     text-decoration: none;
   }
 
@@ -839,7 +876,6 @@ strong {
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  background: transparent;
   border: none;
   color: white;
   text-decoration: none;
@@ -1381,13 +1417,14 @@ strong {
   }
 
   .action-btn {
-    padding: 10px 15px;
-    font-size: 12px;
-    gap: 4px;
+    padding: 20px 15px;
+        font-size: 24px;
+        gap: 4px;
+        border-radius: 25px;
   }
 
   .action-btn i {
-    font-size: 18px;
+    font-size: 24px;
     margin-right: 2px;
   }
 
@@ -1551,7 +1588,7 @@ strong {
   }
 
   .action-btn i {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   /* Small mobile adjustments */
@@ -1657,8 +1694,8 @@ strong {
 
 @media (max-width: 480px) {
   .action-btn {
-    padding: 10px 15px;
-    font-size: 12px;
+    padding: 15px 15px;
+    font-size: 24px;
   }
 
   .nav-menu {
