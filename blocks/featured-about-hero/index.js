@@ -1,10 +1,11 @@
 /**
  * Featured About Hero Block
  */
-(function (blocks, element, editor, components, i18n) {
+(function (blocks, element, blockEditor, components, i18n) {
     var el = element.createElement;
-    var RichText = editor.RichText;
-    var MediaUpload = editor.MediaUpload;
+    var RichText = blockEditor.RichText;
+    var MediaUpload = blockEditor.MediaUpload;
+    var MediaUploadCheck = blockEditor.MediaUploadCheck;
     var Button = components.Button;
     var __ = i18n.__;
 
@@ -42,27 +43,42 @@
             }
 
             function createImageUpload(index, chip) {
-                return el(MediaUpload, {
-                    onSelect: function(media) { 
-                        updateChip(index, { url: media.url, alt: media.alt }); 
-                    },
-                    allowedTypes: ['image'],
-                    value: chip.url,
-                    render: function(obj) {
-                        return chip.url ?
-                            el('img', { 
-                                src: chip.url, 
-                                alt: chip.alt || '',
-                                className: 'chip-image',
-                                onClick: obj.open,
-                                style: { cursor: 'pointer' }
-                            }) :
-                            el(Button, {
-                                onClick: obj.open,
-                                className: 'chip-image-upload'
-                            }, __('Select Image'));
-                    }
-                });
+                return el(MediaUploadCheck, {},
+                    el(MediaUpload, {
+                        onSelect: function(media) { 
+                            updateChip(index, { url: media.url, alt: media.alt || '' }); 
+                        },
+                        allowedTypes: ['image'],
+                        value: chip.id,
+                        render: function(obj) {
+                            return el('div', { className: 'chip-image-wrapper' },
+                                chip.url ?
+                                    el('div', { 
+                                        className: 'chip-image-preview',
+                                        onClick: obj.open,
+                                        style: { cursor: 'pointer' }
+                                    },
+                                        el('img', { 
+                                            src: chip.url, 
+                                            alt: chip.alt || '',
+                                            className: 'chip-image'
+                                        }),
+                                        el(Button, {
+                                            onClick: obj.open,
+                                            isSecondary: true,
+                                            isSmall: true,
+                                            className: 'chip-image-replace'
+                                        }, __('Replace'))
+                                    ) :
+                                    el(Button, {
+                                        onClick: obj.open,
+                                        isPrimary: true,
+                                        className: 'chip-image-upload'
+                                    }, __('+ Select Image'))
+                            );
+                        }
+                    })
+                );
             }
 
             return el('div', { className: 'featured-about-hero-block' },

@@ -255,8 +255,8 @@ add_action('enqueue_block_editor_assets', 'apc_register_featured_about_hero_bloc
  * Register the block type with render callback
  */
 function apc_register_featured_about_hero_block_type() {
-    register_block_type('apc-theme/featured-about-hero', array(
-        'render_callback' => function($attributes) {
+    register_block_type(get_template_directory() . '/blocks/featured-about-hero/block.json', array(
+        'render_callback' => function($attributes, $content, $block) {
             ob_start();
             include get_template_directory() . '/blocks/featured-about-hero/render.php';
             return ob_get_clean();
