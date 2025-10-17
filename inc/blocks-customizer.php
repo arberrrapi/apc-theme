@@ -37,6 +37,15 @@ function apc_register_blocks() {
         'render_callback' => 'apc_render_hero_block'
     ));
     
+    // Register What We Do block
+    register_block_type(get_template_directory() . '/blocks/what-we-do/block.json', array(
+        'render_callback' => function($attributes, $content, $block) {
+            ob_start();
+            include get_template_directory() . '/blocks/what-we-do/render.php';
+            return ob_get_clean();
+        }
+    ));
+    
     // Register Tailored Solutions block
     register_block_type(get_template_directory() . '/blocks/tailored-solutions/block.json', array(
         'render_callback' => 'apc_render_tailored_solutions_block'

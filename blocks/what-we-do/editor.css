@@ -1,0 +1,38 @@
+/* What We Do Block - Editor Styles */
+
+.wp-block-apc-what-we-do .components-panel__body {
+  padding: 16px;
+}
+
+.wp-block-apc-what-we-do .components-base-control {
+  margin-bottom: 16px;
+}
+
+.wp-block-apc-what-we-do .components-base-control__label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.wp-block-apc-what-we-do .editor-image-upload {
+  margin: 20px 0;
+}
+
+.wp-block-apc-what-we-do .editor-image-upload img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.wp-block-apc-what-we-do .card-section {
+  border-top: 1px solid #ddd;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.wp-block-apc-what-we-do .card-section h4 {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e1e1e;
+}

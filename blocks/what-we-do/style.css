@@ -1,0 +1,232 @@
+/* What We Do Block Styles */
+
+.what-we-do {
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--brand-color) 100%
+  );
+  max-height: 624px;
+  height: 624px;
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+  border-radius: 25px 25px 0 0;
+}
+
+.what-we-do-container {
+  padding: 0 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.what-we-do-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  height: 100%;
+  padding: 30px 0 0 0;
+}
+
+.what-we-do-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.section-label {
+  background: white;
+  color: var(--brand-color);
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: 900;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 96px;
+  font-weight: 900;
+  color: white;
+  line-height: 1.1;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.what-we-do-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.what-we-do-image img {
+  max-width: 100%;
+  height: 479px;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: bottom right;
+}
+
+/* What We Do Info Section */
+.what-we-do-info {
+  padding: 80px 0;
+  background-color: white;
+  border-radius: 0 0 25px 25px;
+  position: relative;
+}
+
+.what-we-do-info::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--brand-color) 100%
+  );
+  border-radius: 0 0 25px 25px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+.what-we-do-info-container {
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.info-column {
+  display: flex;
+  justify-content: center;
+}
+
+.info-card {
+  background-color: var(--light-color);
+  height: 410px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--brand-color) 100%
+  );
+  border-radius: 25px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+.info-card i {
+  font-size: 45px;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--brand-color) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin-bottom: auto;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 6 Brands", "FontAwesome", sans-serif;
+  font-weight: 900;
+}
+
+.info-content {
+  margin-top: auto;
+}
+
+.info-content h4 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--brand-color);
+  margin-bottom: 15px;
+}
+
+.info-content p {
+  font-size: 24px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 1380px) {
+  .what-we-do-info-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .what-we-do {
+    max-height: none;
+    height: auto;
+  }
+
+  .what-we-do-info {
+    padding: 40px 0;
+  }
+
+  .what-we-do-info-container {
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  .what-we-do-image {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .what-we-do-image img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .what-we-do-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 38px;
+    margin-top: 20px;
+  }
+
+  .info-card {
+    height: auto;
+  }
+
+  .info-content {
+    margin-top: 20px;
+  }
+  
+  .info-content h4 {
+    font-size: 28px;
+  }
+
+  .info-content p {
+    font-size: 22px;
+  }
+}
