@@ -88,26 +88,93 @@
             
             // Use WordPress data hooks properly
             var useSelect = wp.data.useSelect;
+            
+            // Fetch Pages
             var pagesData = useSelect(function(select) {
-                return select('core').getEntityRecords('postType', 'page', { 
+                var coreSelect = select('core');
+                if (!coreSelect) return null;
+                return coreSelect.getEntityRecords('postType', 'page', { 
                     per_page: -1, 
-                    status: 'publish' 
+                    status: 'publish',
+                    orderby: 'title',
+                    order: 'asc'
+                });
+            }, []);
+            
+            // Fetch Services
+            var servicesData = useSelect(function(select) {
+                var coreSelect = select('core');
+                if (!coreSelect) return null;
+                return coreSelect.getEntityRecords('postType', 'service', { 
+                    per_page: -1, 
+                    status: 'publish',
+                    orderby: 'title',
+                    order: 'asc'
+                });
+            }, []);
+            
+            // Fetch Sectors
+            var sectorsData = useSelect(function(select) {
+                var coreSelect = select('core');
+                if (!coreSelect) return null;
+                return coreSelect.getEntityRecords('postType', 'sector', { 
+                    per_page: -1, 
+                    status: 'publish',
+                    orderby: 'title',
+                    order: 'asc'
                 });
             }, []);
 
-            // Build pages array
+            // Build pages array with grouped options
             var pages = [];
-            if (pagesData && Array.isArray(pagesData)) {
-                pages = pagesData.map(function(page) {
-                    return { 
+            
+            // Debug logging
+            console.log('IT Challenges Debug:');
+            console.log('Pages Data:', pagesData);
+            console.log('Services Data:', servicesData);
+            console.log('Sectors Data:', sectorsData);
+            
+            // Add pages group
+            if (pagesData && Array.isArray(pagesData) && pagesData.length > 0) {
+                pages.push({ label: '--- Pages ---', value: '', disabled: true });
+                pagesData.forEach(function(page) {
+                    pages.push({ 
                         label: page.title.rendered || 'Untitled', 
                         value: page.id 
-                    };
+                    });
                 });
-                console.log('IT Challenges: useSelect loaded ' + pages.length + ' pages');
-            } else {
-                console.log('IT Challenges: Pages not ready yet', pagesData);
+                console.log('Added ' + pagesData.length + ' pages');
             }
+            
+            // Add services group
+            if (servicesData && Array.isArray(servicesData) && servicesData.length > 0) {
+                pages.push({ label: '--- Services ---', value: '', disabled: true });
+                servicesData.forEach(function(service) {
+                    pages.push({ 
+                        label: service.title.rendered || 'Untitled', 
+                        value: service.id 
+                    });
+                });
+                console.log('Added ' + servicesData.length + ' services');
+            } else {
+                console.log('No services found or services data not ready');
+            }
+            
+            // Add sectors group
+            if (sectorsData && Array.isArray(sectorsData) && sectorsData.length > 0) {
+                pages.push({ label: '--- Sectors ---', value: '', disabled: true });
+                sectorsData.forEach(function(sector) {
+                    pages.push({ 
+                        label: sector.title.rendered || 'Untitled', 
+                        value: sector.id 
+                    });
+                });
+                console.log('Added ' + sectorsData.length + ' sectors');
+            } else {
+                console.log('No sectors found or sectors data not ready');
+            }
+            
+            console.log('Total options in dropdown:', pages.length);
 
             function updateChallenge(index, field, value) {
                 var newChallenges = [...attributes.challenges];
@@ -165,7 +232,7 @@
                             selected: attributes.mainButtonType,
                             options: [
                                 { label: __('Custom URL'), value: 'url' },
-                                { label: __('Select Page'), value: 'page' }
+                                { label: __('Select Page/Service/Sector'), value: 'page' }
                             ],
                             onChange: function (value) {
                                 setAttributes({ mainButtonType: value });
@@ -179,10 +246,10 @@
                             }
                         }),
                         attributes.mainButtonType === 'page' && el(SelectControl, {
-                            label: __('Select Page for Main Button'),
+                            label: __('Select Page/Service/Sector for Main Button'),
                             value: attributes.mainButtonPage,
-                            options: [{ label: __('Select a page...'), value: 0 }].concat(
-                                pages.length > 0 ? pages : [{ label: __('No pages found'), value: 0 }]
+                            options: [{ label: __('Select...'), value: 0 }].concat(
+                                pages.length > 0 ? pages : [{ label: __('No content found'), value: 0 }]
                             ),
                             onChange: function (value) {
                                 setAttributes({ mainButtonPage: parseInt(value) });
@@ -227,7 +294,7 @@
                                     selected: challenge.buttonType || 'url',
                                     options: [
                                         { label: __('Custom URL'), value: 'url' },
-                                        { label: __('Select Page'), value: 'page' }
+                                        { label: __('Select Page/Service/Sector'), value: 'page' }
                                     ],
                                     onChange: function (value) {
                                         updateChallenge(index, 'buttonType', value);
@@ -241,10 +308,10 @@
                                     }
                                 }),
                                 challenge.buttonType === 'page' && el(SelectControl, {
-                                    label: __('Select Page'),
+                                    label: __('Select Page/Service/Sector'),
                                     value: challenge.buttonPage || 0,
-                                    options: [{ label: __('Select a page...'), value: 0 }].concat(
-                                        pages.length > 0 ? pages : [{ label: __('No pages found'), value: 0 }]
+                                    options: [{ label: __('Select...'), value: 0 }].concat(
+                                        pages.length > 0 ? pages : [{ label: __('No content found'), value: 0 }]
                                     ),
                                     onChange: function (value) {
                                         updateChallenge(index, 'buttonPage', parseInt(value));
