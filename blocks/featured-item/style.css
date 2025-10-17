@@ -43,3 +43,18 @@
     margin: 0;
     font-size: 20px;
     color: var(--text-color);}
+
+
+    @media screen and (max-width: 768px) {
+        .featured-item-title {
+            font-size: 22px !important;
+        }
+
+        .featured-item-description {
+            font-size: 22px !important;
+        }
+
+        .featured-item-header i {
+            font-size: 22px;
+       
+    }

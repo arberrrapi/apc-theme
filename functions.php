@@ -36,8 +36,9 @@ function apc_theme_scripts() {
     // Enqueue main stylesheet
     wp_enqueue_style('apc-theme-style', get_stylesheet_uri(), array(), '1.0.0');
     
-    // Enqueue Font Awesome
-    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css', array(), '6.4.0');
+    // Enqueue Font Awesome Kit
+    wp_enqueue_script('font-awesome-kit', 'https://kit.fontawesome.com/1ce2aca7bc.js', array(), null, false);
+    wp_script_add_data('font-awesome-kit', 'crossorigin', 'anonymous');
     
     // Enqueue custom JavaScript
     wp_enqueue_script('apc-theme-script', get_template_directory_uri() . '/script.js', array(), '1.0.0', true);

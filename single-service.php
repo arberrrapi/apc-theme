@@ -9,7 +9,7 @@ get_header(); ?>
     $service_icon = get_post_meta(get_the_ID(), '_service_icon', true);
 ?>
 
-<article class="single-service">
+<article class="single-service ">
         <!-- Service Header Section - Same styling as pages -->
         <div class="page-header"<?php if (apc_is_header_hidden(get_the_ID())) echo ' style="display: none;"'; ?>>
            

@@ -252,11 +252,18 @@
     grid-template-columns: 1fr;
     gap: 40px;
     min-height: auto;
+    display: block;
+    padding: 0px;
   }
 
   .featured-listing-header {
     position: static;
     text-align: center;
+    height: auto;
+  }
+
+  .header-image{
+    margin-top: 20px;
   }
 
   .featured-listing-title {
@@ -264,7 +271,7 @@
   }
 
   .featured-listing-description {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .listings-grid {
@@ -272,11 +279,15 @@
   }
 
   .listing-card {
-    padding: 30px 20px;
+    padding: 40px 30px;
   }
 
   .listing-description {
     margin-top: 15px;
     margin-bottom: 20px;
+  }
+
+  .header-image img {
+    width: 100%;
   }
 }

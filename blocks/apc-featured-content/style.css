@@ -200,7 +200,7 @@
 
 @media (max-width: 480px) {
   .featured-content-text {
-    padding: 20px 15px !important;
+    padding: 40px 30px !important;
   }
 
   .featured-title {
@@ -208,6 +208,5 @@
 
   .featured-btn {
     padding: 12px 25px;
-    font-size: 14px;
   }
 }

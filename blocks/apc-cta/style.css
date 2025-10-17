@@ -290,7 +290,7 @@ select option:first-child {
   }
 
   .wp-block-apc-cta .apc-cta-content {
-    font-size: 16px;
+    font-size: 22px;
     margin: 0 auto;
     text-align: center;
   }
@@ -301,18 +301,45 @@ select option:first-child {
   }
 
   .wp-block-apc-cta .benefits-lists ul {
-    text-align: center;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .apc-cta-row-1 .apc-cta-col-2{
+    display: none;
+  }
+  .wp-block-apc-cta .apc-cta-benefit{
+    margin-top: 20px;
+  }
+  .wp-block-apc-cta .benefits-lists li{
+    padding-left: 0px;
   }
 
   .wp-block-apc-cta .next-step-columns {
     flex-direction: column;
-    gap: 20px;
+    gap: 0px;
+  }
+
+  .gform_wrapper{
+    font-size: 22px;
+  }
+  .gform_wrapper.gravity-theme input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]), select {
+    height: 75px;
   }
 
   .wp-block-apc-cta .next-step-item {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
     padding: 15px 10px;
+    width: 100%;
+  }
+
+  .wp-block-apc-cta .next-step-item:first-child{
+    padding-left: 10px;
+  }
+
+  .wp-block-apc-cta .step-number{
+    justify-content: left;
   }
 
   .wp-block-apc-cta .step-arrow {
@@ -320,7 +347,7 @@ select option:first-child {
   }
 
   .wp-block-apc-cta .step-description {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .wp-block-apc-cta .cta-form {

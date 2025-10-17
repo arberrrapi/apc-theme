@@ -61,12 +61,29 @@ class APC_Walker_Nav_Menu extends Walker_Nav_Menu {
             // First sub-level items (mega menu columns)
             $has_children = in_array('menu-item-has-children', $classes);
             
+            // Extract Font Awesome or icon classes (look for fa-, icon- prefix or multiple icon classes)
+            $icon_classes = array();
+            foreach ($classes as $class) {
+                if (strpos($class, 'fa-') === 0 || strpos($class, 'icon-') === 0) {
+                    $icon_classes[] = $class;
+                }
+            }
+            $icon_class = !empty($icon_classes) ? implode(' ', $icon_classes) : '';
+            
             if ($has_children) {
                 $output .= '<div class="mega-menu-column">';
-                $output .= '<h4>' . esc_html($item->title) . '</h4>';
+                $output .= '<h4>';
+                if ($icon_class) {
+                    $output .= '<i class="mega-menu-icon ' . esc_attr($icon_class) . '"></i>';
+                }
+                $output .= esc_html($item->title) . '</h4>';
             } else {
                 $output .= '<div class="mega-menu-column">';
-                $output .= '<a href="' . esc_url($item->url) . '">' . esc_html($item->title) . '</a>';
+                $output .= '<a href="' . esc_url($item->url) . '">';
+                if ($icon_class) {
+                    $output .= '<i class="mega-menu-icon ' . esc_attr($icon_class) . '"></i>';
+                }
+                $output .= esc_html($item->title) . '</a>';
             }
             
         } elseif ($depth === 2) {
