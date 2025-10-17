@@ -34,7 +34,7 @@ add_action('after_setup_theme', 'apc_theme_setup');
  */
 function apc_theme_scripts() {
     // Enqueue main stylesheet
-    wp_enqueue_style('apc-theme-style', get_stylesheet_uri(), array(), '1.0.0');
+    wp_enqueue_style('apc-theme-style', get_stylesheet_uri(), array(), '1.0.1');
     
     // Enqueue Font Awesome Kit
     wp_enqueue_script('font-awesome-kit', 'https://kit.fontawesome.com/1ce2aca7bc.js', array(), null, false);
