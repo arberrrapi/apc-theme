@@ -295,7 +295,7 @@ body {
   color: var(--text-color);
   overflow-x: hidden;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 p {
@@ -314,6 +314,62 @@ h4 {
 strong {
     font-weight: 600;
 }
+
+/* Custom Select Dropdown Styles */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  padding-right: 45px;
+  cursor: pointer;
+  position: relative;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:focus {
+  outline: 2px solid var(--brand-color);
+  outline-offset: 2px;
+}
+
+select option {
+  padding: 10px;
+  background: white;
+  color: var(--text-color);
+}
+
+select option:disabled {
+  color: #999;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Select wrapper for Font Awesome icon */
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.select-wrapper::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Pro', 'FontAwesome';
+  font-weight: 900;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--brand-color);
+  pointer-events: none;
+  font-size: 14px;
+}
+
 /* Header Styles */
 .header {
   width: 100%;

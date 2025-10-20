@@ -201,6 +201,42 @@ textarea:focus {
  select {
   cursor: pointer;
   color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+  padding-right: 45px;
+  position: relative;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/* Add Font Awesome arrow to select fields in forms */
+.cta-form .form-group {
+  position: relative;
+}
+
+.cta-form .form-group::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Pro', 'FontAwesome';
+  font-weight: 900;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--brand-color);
+  pointer-events: none;
+  font-size: 14px;
+}
+
+.cta-form .form-group:has(input)::after,
+.cta-form .form-group:has(textarea)::after {
+  display: none;
 }
 
 select option:first-child {
@@ -390,6 +426,28 @@ select option:first-child {
 
 .wp-block-apc-cta .gform_wrapper .gform_body {
   padding: 0;
+}
+
+/* Font Awesome arrow for Gravity Forms select fields */
+.wp-block-apc-cta .gform_wrapper .gfield:has(select) {
+  position: relative;
+}
+
+.wp-block-apc-cta .gform_wrapper .gfield:has(select)::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Pro', 'FontAwesome';
+  font-weight: 900;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--brand-color);
+  pointer-events: none;
+  font-size: 18px;
+}
+
+.wp-block-apc-cta .gform_wrapper .gfield label {
+  margin-bottom: 8px;
 }
 
 .wp-block-apc-cta .gform_wrapper .gfield {
