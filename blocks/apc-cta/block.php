@@ -53,21 +53,21 @@ function apc_render_cta_block($attributes, $content = '') {
                         <div class="next-step-columns">
                             <div class="next-step-item">
                                 <p class="step-number">1</p>
-                                <p class="step-description">We Schedule a call at your convenience</p>
+                                <p class="step-description">We listen to your goals.</p>
                             </div>
                             <div class="step-arrow">
                                 <i class="fa-solid fa-arrow-right"></i>
                             </div>
                             <div class="next-step-item">
                                 <p class="step-number">2</p>
-                                <p class="step-description">We understand what you need in a consulting meeting</p>
+                                <p class="step-description">Our experts assess your IT landscape.</p>
                             </div>
                             <div class="step-arrow">
                                 <i class="fa-solid fa-arrow-right"></i>
                             </div>
                             <div class="next-step-item">
                                 <p class="step-number">3</p>
-                                <p class="step-description">We prepare a proposal</p>
+                                <p class="step-description">You receive a customized IT plan.</p>
                             </div>
                         </div>
                     </div>

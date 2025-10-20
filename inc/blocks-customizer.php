@@ -46,6 +46,15 @@ function apc_register_blocks() {
         }
     ));
     
+    // Register Custom CTA block
+    register_block_type(get_template_directory() . '/blocks/custom-cta/block.json', array(
+        'render_callback' => function($attributes, $content, $block) {
+            ob_start();
+            include get_template_directory() . '/blocks/custom-cta/render.php';
+            return ob_get_clean();
+        }
+    ));
+    
     // Register Tailored Solutions block
     register_block_type(get_template_directory() . '/blocks/tailored-solutions/block.json', array(
         'render_callback' => 'apc_render_tailored_solutions_block'

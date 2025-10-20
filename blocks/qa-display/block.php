@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  * Render the Q&A Display block
  */
 function apc_render_qa_display_block($attributes) {
-    $title = isset($attributes['title']) ? $attributes['title'] : 'Curious? ';
+    $title = isset($attributes['title']) ? $attributes['title'] : 'Explore Answers';
     $description = isset($attributes['description']) ? $attributes['description'] : 'Here’s What You Need to Know About Our Managed IT Services';
     $show_all_categories = isset($attributes['showAllCategories']) ? $attributes['showAllCategories'] : true;
     $selected_categories = isset($attributes['selectedCategories']) ? $attributes['selectedCategories'] : array();

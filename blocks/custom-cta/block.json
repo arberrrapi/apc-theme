@@ -1,0 +1,37 @@
+{
+  "apiVersion": 2,
+  "name": "apc/custom-cta",
+  "title": "Custom CTA",
+  "category": "apc-blocks",
+  "icon": "megaphone",
+  "description": "A full-width call-to-action block with gradient background, title on left and button on right",
+  "keywords": ["cta", "call to action", "button", "banner"],
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Ready to transform your IT infrastructure?"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Get Started"
+    },
+    "buttonLink": {
+      "type": "string",
+      "default": "#contact"
+    },
+    "buttonType": {
+      "type": "string",
+      "default": "url"
+    },
+    "buttonPage": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

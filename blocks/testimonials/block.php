@@ -33,7 +33,7 @@ function render_testimonials_block($attributes, $content = '') {
         <div class="testimonials-container">
             <div class="testimonials-header">
                 <div class="testimonials-header-left">
-                    <h2>What Our Clients Say</h2>
+                    <h2>Live Client Feedback</h2>
                     <p>CSAT <span>99.5</span></p>
                 </div>
                 <div class="testimonials-header-right">
