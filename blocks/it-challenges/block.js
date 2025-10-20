@@ -377,12 +377,12 @@
                         padding: '20px',
                         backgroundColor: '#f8f9fa',
                         borderRadius: '10px',
-                        border: '2px dashed #7055EE'
+                        border: '2px dashed #2119d4'
                     }
                 },
                     el('h3', { 
                         style: { 
-                            color: '#7055EE', 
+                            color: '#2119d4', 
                             fontSize: '24px',
                             marginBottom: '10px'
                         } 
@@ -403,7 +403,7 @@
                         style: {
                             display: 'inline-block',
                             padding: '10px 20px',
-                            backgroundColor: '#7055EE',
+                            backgroundColor: '#2119d4',
                             color: 'white',
                             textDecoration: 'none',
                             borderRadius: '25px',
@@ -466,7 +466,7 @@
                                 el('span', {
                                     style: {
                                         fontSize: '11px',
-                                        backgroundColor: '#7055EE',
+                                        backgroundColor: '#2119d4',
                                         color: 'white',
                                         padding: '4px 8px',
                                         borderRadius: '12px'

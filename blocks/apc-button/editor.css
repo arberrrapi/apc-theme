@@ -2,7 +2,7 @@
 
 /* Make buttons look like frontend in the editor */
 .wp-block-apc-button .apc-button {
-    background: var(--brand-color, #7055EE);
+    background: var(--brand-color);
     color: white;
     padding: 15px 30px;
     border: none;
@@ -54,8 +54,8 @@
     bottom: 0;
     background: linear-gradient(
         135deg,
-        var(--secondary-color, #7055EE),
-        var(--brand-color, #7055EE)
+        var(--secondary-color, #2119d4),
+        var(--brand-color, #2119d4)
     );
     opacity: 0;
     transition: opacity 0.3s ease;

@@ -89,7 +89,7 @@
                         padding: '30px',
                         backgroundColor: '#f8f9fa',
                         borderRadius: '10px',
-                        border: '2px dashed #7055EE',
+                        border: '2px dashed #2119d4',
                         textAlign: attributes.alignment || 'center',
                         maxWidth: '400px',
                         margin: '20px auto'

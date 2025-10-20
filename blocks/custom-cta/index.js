@@ -148,7 +148,7 @@
                         className: 'wp-block-apc-custom-cta',
                         style: { 
                             padding: '20px',
-                            background: 'linear-gradient(135deg, #47267D, #7055EE)',
+                            background: 'linear-gradient(135deg, #47267D, #2119d4)',
                             borderRadius: '25px',
                             display: 'flex',
                             alignItems: 'center',

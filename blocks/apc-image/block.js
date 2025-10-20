@@ -89,7 +89,7 @@
                                                 onClick: obj.open,
                                                 className: 'button button-large',
                                                 style: { 
-                                                    background: '#7055EE',
+                                                    background: '#2119d4',
                                                     color: 'white',
                                                     border: 'none',
                                                     borderRadius: '8px',

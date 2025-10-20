@@ -2,7 +2,7 @@
 
 /* Define CSS variables for editor context */
 :root {
-    --brand-color: #7055ee;
+    --brand-color: #2119d4;
     --secondary-color: #00c8ff;
 }
 
@@ -14,7 +14,7 @@
 
 .wp-block-apc-counters .counters-container,
 .editor-block-list__block[data-type="apc/counters"] .counters-container {
-    background: linear-gradient(135deg, #00c8ff, #7055ee) !important;
+    background: linear-gradient(135deg, #00c8ff, #2119d4) !important;
     border-radius: 25px !important;
     padding: 40px 20px !important;
     display: flex !important;

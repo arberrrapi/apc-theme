@@ -16,7 +16,7 @@
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(135deg, var(--brand-color, #7055EE), var(--secondary-color, #7055EE));
+    background: linear-gradient(135deg, var(--brand-color, #2119d4), var(--secondary-color, #2119d4));
     border-radius: 27px;
     z-index: -1;
 }
@@ -30,7 +30,7 @@
 .wp-block-apc-featured-item .featured-item-header i {
     margin-right: 10px;
     font-size: 20px;
-    color: var(--brand-color, #7055EE);
+    color: var(--brand-color, #2119d4);
 }
 
 .wp-block-apc-featured-item .featured-item-title {

@@ -204,7 +204,7 @@
                     el('div', { 
                         className: 'counters-container',
                         style: {
-                            background: 'linear-gradient(135deg, #00c8ff, #7055ee)',
+                            background: 'linear-gradient(135deg, #00c8ff, #2119d4)',
                             borderRadius: '25px',
                             padding: '40px 20px',
                             display: 'flex',

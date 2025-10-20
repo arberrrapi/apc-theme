@@ -291,7 +291,7 @@ get_header(); ?>
 }
 
 .post-title a:hover {
-    color: #7055EE;
+    color: var(--brand-color);
 }
 
 .blog-pagination {
@@ -318,9 +318,9 @@ get_header(); ?>
 
 .blog-pagination .page-numbers:hover,
 .blog-pagination .page-numbers.current {
-    background: #7055EE;
+    background: #2119d4;
     color: white;
-    border-color: #7055EE;
+    border-color: #2119d4;
 }
 
 .no-posts-found {
@@ -443,7 +443,7 @@ get_header(); ?>
 }
 
 .all-button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--secondary-color, #00c8ff) 0%, var(--brand-color, #2119d4) 100%);
     color: white;
     border: none;
     padding: 0.75rem 1.25rem;

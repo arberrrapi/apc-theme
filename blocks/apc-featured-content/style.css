@@ -28,8 +28,8 @@
   padding: 3px;
   background: linear-gradient(
     135deg,
-    var(--secondary-color, #7055EE) 0%,
-    var(--brand-color, #7055EE) 100%
+    var(--secondary-color, #2119d4) 0%,
+    var(--brand-color, #2119d4) 100%
   );
   border-radius: 25px;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -68,7 +68,7 @@
 
 /* Title styles */
 .featured-title {
-  color: var(--brand-color, #7055EE);
+  color: var(--brand-color, #2119d4);
   margin: 0 0 20px 0;
   line-height: 1.2;
 }
@@ -81,11 +81,11 @@
 
 /* Button styles */
 .featured-btn {
-  color: var(--brand-color, #7055EE);
+  color: var(--brand-color, #2119d4);
   padding: 15px 30px;
   border: 2px solid transparent;
   background: linear-gradient(white, white) padding-box,
-              linear-gradient(135deg, var(--secondary-color, #7055EE), var(--brand-color, #7055EE)) border-box;
+              linear-gradient(135deg, var(--secondary-color, #2119d4), var(--brand-color, #2119d4)) border-box;
   border-radius: 50px;
   font-size: 16px;
   font-weight: 600;
@@ -109,8 +109,8 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    var(--secondary-color, #7055EE),
-    var(--brand-color, #7055EE)
+    var(--secondary-color, #2119d4),
+    var(--brand-color, #2119d4)
   );
   opacity: 0;
   transition: opacity 0.3s ease;

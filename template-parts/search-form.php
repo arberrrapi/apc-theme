@@ -57,7 +57,7 @@ $search_id = 'search-' . wp_generate_uuid4();
 }
 
 .search-input-container:focus-within {
-    border-color: #7055EE;
+    border-color: #2119d4;
     box-shadow: 0 0 0 4px rgba(112, 85, 238, 0.1);
 }
 
@@ -79,7 +79,7 @@ $search_id = 'search-' . wp_generate_uuid4();
 .search-submit-btn {
     padding: 1rem 1.5rem;
     border: none;
-    background: #7055EE;
+    background: #2119d4;
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -173,7 +173,7 @@ $search_id = 'search-' . wp_generate_uuid4();
     }
     
     .search-input-container:focus-within {
-        border-color: #7055EE;
+        border-color: #2119d4;
     }
     
     .apc-search-input {

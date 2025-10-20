@@ -181,7 +181,7 @@
                         padding: '20px',
                         backgroundColor: 'white',
                         borderRadius: '25px',
-                        border: '2px solid #7055EE',
+                        border: '2px solid #2119d4',
                         margin: '20px 0'
                     }
                 },
@@ -207,7 +207,7 @@
                             el('div', {},
                                 el('h3', {
                                     style: {
-                                        color: '#7055EE',
+                                        color: '#2119d4',
                                         fontSize: '32px',
                                         fontWeight: '700',
                                         marginBottom: '20px',
@@ -232,14 +232,14 @@
                                     style: {
                                         display: 'inline-block',
                                         padding: '15px 30px',
-                                        backgroundColor: '#7055EE',
+                                        backgroundColor: '#2119d4',
                                         color: 'white',
                                         textDecoration: 'none',
                                         borderRadius: '50px',
                                         fontSize: '16px',
                                         fontWeight: '600',
                                         border: '2px solid transparent',
-                                        background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #7055EE, #7055EE) border-box'
+                                        background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #2119d4, #2119d4) border-box'
                                     }
                                 }, attributes.buttonText || __('Learn More'))
                             )

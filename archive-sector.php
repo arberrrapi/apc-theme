@@ -86,7 +86,7 @@ get_header(); ?>
                             <?php 
                             $sector_icon = get_post_meta(get_the_ID(), '_sector_icon', true);
                             $sector_color = get_post_meta(get_the_ID(), '_sector_color', true);
-                            if (!$sector_color) $sector_color = '#7055EE';
+                            if (!$sector_color) $sector_color = '#2119d4';
                             ?>
                             
                             <div class="sector-card-header" style="border-top: 4px solid <?php echo esc_attr($sector_color); ?>;">
@@ -257,9 +257,9 @@ get_header(); ?>
 
 .filter-tab:hover,
 .filter-tab.active {
-    background: var(--brand-color, #7055EE);
+    background: var(--brand-color, #2119d4);
     color: white;
-    border-color: var(--brand-color, #7055EE);
+    border-color: var(--brand-color, #2119d4);
     text-decoration: none;
 }
 
@@ -340,7 +340,7 @@ get_header(); ?>
 }
 
 .sector-card-title a:hover {
-    color: var(--brand-color, #7055EE);
+    color: var(--brand-color, #2119d4);
 }
 
 .sector-card-excerpt {
@@ -379,13 +379,13 @@ get_header(); ?>
     content: '•';
     position: absolute;
     left: 0;
-    color: var(--brand-color, #7055EE);
+    color: var(--brand-color, #2119d4);
     font-weight: bold;
 }
 
 .sector-card-services .more-services {
     font-style: italic;
-    color: var(--brand-color, #7055EE);
+    color: var(--brand-color, #2119d4);
     font-weight: 500;
 }
 
@@ -447,7 +447,7 @@ get_header(); ?>
 .btn {
     display: inline-block;
     padding: 15px 30px;
-    background: var(--brand-color, #7055EE);
+    background: var(--brand-color, #2119d4);
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -482,8 +482,8 @@ get_header(); ?>
 
 .pagination .page-numbers:hover,
 .pagination .page-numbers.current {
-    background: var(--brand-color, #7055EE);
-    border-color: var(--brand-color, #7055EE);
+    background: var(--brand-color, #2119d4);
+    border-color: var(--brand-color, #2119d4);
     color: white;
     text-decoration: none;
 }

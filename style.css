@@ -275,8 +275,9 @@ It includes all the original functionality with WordPress integration.
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
 
 :root {
-  --brand-color: #6f07ff;
+  --brand-color: #2119d4;
   --brand-dark: #190043;
+  --secondary-brand-color: #6f07ff;
   --text-color: #0D0717;
   --secondary-color: #00c8ff;
   --light-color: #f4f9ff;
@@ -671,7 +672,7 @@ select option:disabled {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(135deg,#47267D, #7055EE);
+  background: linear-gradient(135deg,var(--secondary-color, #00c8ff), var(--brand-color, #2119d4));
   border-radius: 25px;
   padding: 40px 30px;
   text-align: left;

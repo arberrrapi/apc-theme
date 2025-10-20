@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
  * Render the Switch to APC block
  */
 function apc_render_switch_to_apc_block($attributes) {
-    $title = isset($attributes['title']) ? $attributes['title'] : '<h2>Why <span style="color: #7055EE;">Switch to APC</span>?</h2>';
+    $title = isset($attributes['title']) ? $attributes['title'] : '<h2>Why <span style="color: #2119d4;">Switch to APC</span>?</h2>';
     $listings = isset($attributes['listings']) ? $attributes['listings'] : array();
 
     if (empty($listings)) {

@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 140px;
-  background: linear-gradient(135deg, #47267D, #7055EE);
+  background: linear-gradient(135deg, #47267D, #2119d4);
   border-radius: 25px;
   padding: 50px 60px;
   min-height: 180px;
@@ -46,7 +46,7 @@
 
 .custom-cta-button:hover {
   background: white;
-  color: #7055EE;
+  color: #2119d4;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }

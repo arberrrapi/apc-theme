@@ -19,7 +19,7 @@
         attributes: {
             title: {
                 type: 'string',
-                default: '<h2>Why <span style="color: #7055EE;">Switch to APC</span>?</h2>'
+                default: '<h2>Why <span style="color: #2119d4;">Switch to APC</span>?</h2>'
             },
             listings: {
                 type: 'array',

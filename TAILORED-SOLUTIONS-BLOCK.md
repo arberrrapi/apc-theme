@@ -81,7 +81,7 @@ If no services exist in the custom post type, displays default services:
 
 ### CSS Variables
 The block uses CSS custom properties for theming:
-- `--brand-color`: Primary brand color (#7055EE)
+- `--brand-color`: Primary brand color (#2119d4)
 - `--secondary-color`: Secondary color
 - `--light-color`: Background color (#f8f9fa)
 - `--text-color`: Text color (#333)

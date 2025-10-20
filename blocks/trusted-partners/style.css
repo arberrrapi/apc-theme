@@ -14,8 +14,8 @@
   padding: 2px;
   background: linear-gradient(
     90deg,
-    var(--secondary-color, #7055EE) 0%,
-    var(--brand-color, #7055EE) 100%
+    var(--secondary-color, #2119d4) 0%,
+    var(--brand-color, #2119d4) 100%
   );
   border-radius: 25px;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -37,7 +37,7 @@
 
 .partners-content h2 {
   font-weight: 700;
-  color: var(--brand-color, #7055EE);
+  color: var(--brand-color, #2119d4);
   margin-bottom: 20px;
 }
 

@@ -14,8 +14,8 @@
     padding: 2px;
     background: linear-gradient(
         90deg,
-        var(--secondary-color, #7055EE) 0%,
-        var(--brand-color, #7055EE) 100%
+        var(--secondary-color, #2119d4) 0%,
+        var(--brand-color, #2119d4) 100%
     );
     border-radius: 25px;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -47,7 +47,7 @@
 .tailored-text h3 {
     font-size: 55px;
     font-weight: 700;
-    color: var(--brand-color, #7055EE);
+    color: var(--brand-color, #2119d4);
     margin-bottom: 30px;
 }
 
@@ -110,8 +110,8 @@
 
 .service-item:hover {
     animation-play-state: paused;
-    background: var(--brand-color, #7055EE);
-    border-color: var(--brand-color, #7055EE);
+    background: var(--brand-color, #2119d4);
+    border-color: var(--brand-color, #2119d4);
     box-shadow: 0 4px 20px rgba(112, 85, 238, 0.2);
 }
 
@@ -134,7 +134,15 @@
 
 .service-item i {
     font-size: 40px;
-    color: var(--brand-color, #7055EE);
+    background: linear-gradient(
+        135deg,
+        var(--secondary-color) 0%,
+        var(--brand-color) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
 @keyframes moveServices {

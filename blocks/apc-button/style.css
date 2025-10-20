@@ -18,7 +18,7 @@
 
 /* Base button styles - same as challenge-btn */
 .apc-button {
-  background: var(--brand-color, #7055EE);
+  background: var(--brand-color, #2119d4);
   color: white;
   padding: 15px 30px;
   border: none;
@@ -70,8 +70,8 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    var(--secondary-color, #7055EE),
-    var(--brand-color, #7055EE)
+    var(--secondary-color, #2119d4),
+    var(--brand-color, #2119d4)
   );
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -110,7 +110,7 @@
 
 /* Button Styles */
 .apc-button-primary {
-  background: var(--brand-color, #7055EE);
+  background: var(--brand-color, #2119d4);
   color: white;
 }
 
@@ -129,12 +129,12 @@
 
 .apc-button-outline {
   background: transparent;
-  color: var(--brand-color, #7055EE);
-  border: 2px solid var(--brand-color, #7055EE);
+  color: var(--brand-color, #2119d4);
+  border: 2px solid var(--brand-color, #2119d4);
 }
 
 .apc-button-outline::after {
-  background: var(--brand-color, #7055EE);
+  background: var(--brand-color, #2119d4);
 }
 
 .apc-button-outline:hover {

@@ -25,7 +25,7 @@
 
 .featured-listing-title {
   font-weight: 700;
-  color: var(--brand-color, #7055EE);
+  color: var(--brand-color, #2119d4);
   margin-bottom: 30px;
 }
 
@@ -70,8 +70,8 @@
   padding: 2px;
   background: linear-gradient(
     90deg,
-    var(--secondary-color, #7055EE) 0%,
-    var(--brand-color, #7055EE) 100%
+    var(--secondary-color, #2119d4) 0%,
+    var(--brand-color, #2119d4) 100%
   );
   border-radius: 20px;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -86,11 +86,18 @@
 }
 
 .listing-icon i {
-  font-size: 50px;;
-  color: var(--brand-color, #7055EE);
+  font-size: 50px;
   width: 50px;
   height: 50px;
-  
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color, #00c8ff) 0%,
+    var(--brand-color, #2119d4) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .listing-title {
@@ -152,7 +159,7 @@
 }
 
 .listing-button {
-  background: var(--brand-color, #7055EE);
+  background: var(--brand-color, #2119d4);
   color: white;
   padding: 15px 30px;
   border: none;
@@ -207,8 +214,8 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    var(--secondary-color, #7055EE),
-    var(--brand-color, #7055EE)
+    var(--secondary-color, #2119d4),
+    var(--brand-color, #2119d4)
   );
   opacity: 0;
   transition: opacity 0.3s ease;

@@ -62,7 +62,7 @@
 .feature-content h4,
 .feature-content h5,
 .feature-content h6 {
-  color: var(--brand-color, #7055EE);
+  color: var(--brand-color, #2119d4);
   margin: 0 0 15px 0;
   font-weight: 600;
 }
@@ -85,7 +85,7 @@
 
 /* Link Styles */
 .feature-content a {
-  color: var(--brand-color, #7055EE);
+  color: var(--brand-color, #2119d4);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -99,7 +99,7 @@
 /* Text Formatting */
 .feature-content strong {
   font-weight: 700;
-  color: var(--brand-color, #7055EE);
+  color: var(--brand-color, #2119d4);
 }
 
 .feature-content em {
@@ -195,5 +195,5 @@
 }
 
 .apc-feature-block-preview .feature-content-editor .wp-block-rich-text__editable:focus {
-  box-shadow: 0 0 0 2px var(--brand-color, #7055EE);
+  box-shadow: 0 0 0 2px var(--brand-color, #2119d4);
 }

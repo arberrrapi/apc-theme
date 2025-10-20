@@ -226,7 +226,7 @@
                         padding: '20px',
                         backgroundColor: '#f8f9fa',
                         borderRadius: '10px',
-                        border: '2px dashed #7055EE',
+                        border: '2px dashed #2119d4',
                         backgroundImage: attributes.backgroundImage ? 'url(' + attributes.backgroundImage + ')' : 'none',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
@@ -234,7 +234,7 @@
                 },
                     el('h3', {
                         style: {
-                            color: '#7055EE',
+                            color: '#2119d4',
                             fontSize: '24px',
                             marginBottom: '10px',
                             textAlign: 'center'
