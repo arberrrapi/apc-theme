@@ -78,9 +78,9 @@ function apc_render_cta_block($attributes, $content = '') {
                         
                         <?php if ($use_gravity_form && !empty($gravity_form_id) && class_exists('GFAPI')): ?>
                             <?php 
-                            // Display Gravity Form
+                            // Display Gravity Form (with AJAX disabled)
                             if (function_exists('gravity_form')) {
-                                gravity_form($gravity_form_id, false, true, false, '', true);
+                                gravity_form($gravity_form_id, false, true, false, '', false);
                             } else {
                                 echo '<p>Gravity Forms plugin is required.</p>';
                             }
