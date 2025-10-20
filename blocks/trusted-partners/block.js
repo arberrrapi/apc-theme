@@ -57,8 +57,33 @@
                         url: ''
                     },
                     {
-                        name: 'Darktrace',
-                        logo: 'Darktrace_logo logo.png',
+                        name: 'dell',
+                        logo: 'dell.png',
+                        url: ''
+                    },
+                    {
+                        name: 'lenovo',
+                        logo: 'lenovo.png',
+                        url: ''
+                    },
+                    {
+                        name: 'Sentinel',
+                        logo: 'sentinel.png',
+                        url: ''
+                    },
+                    {
+                        name: 'n-able',
+                        logo: 'n-able.png',
+                        url: ''
+                    },
+                    {
+                        name: '1password',
+                        logo: '1password.png',
+                        url: ''
+                    },
+                    {
+                        name: 'knowbe4',
+                        logo: 'knowbe4.png',
                         url: ''
                     }
                 ]

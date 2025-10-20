@@ -46,8 +46,33 @@ function apc_render_trusted_partners_block($attributes) {
                 'url' => ''
             ),
             array(
-                'name' => 'Darktrace',
-                'logo' => 'Darktrace_logo logo.png',
+                'name' => 'Dell',
+                'logo' => 'dell.png',
+                'url' => ''
+            ),
+            array(
+                'name' => 'lenovo',
+                'logo' => 'lenovo.png',
+                'url' => ''
+            ),
+            array(
+                'name' => 'Sentinel',
+                'logo' => 'sentinel.png',
+                'url' => ''
+            ),
+            array(
+                'name' => 'n-able',
+                'logo' => 'n-able.png',
+                'url' => ''
+            ),
+            array(
+                'name' => '1password',
+                'logo' => '1password.png',
+                'url' => ''
+            ),
+            array(
+                'name' => 'knowbe4',
+                'logo' => 'knowbe4.png',
                 'url' => ''
             )
         );
@@ -66,30 +91,38 @@ function apc_render_trusted_partners_block($attributes) {
             <div class="partners-content">
                 <h2><?php echo esc_html($title); ?></h2>
                 <p><strong><?php echo esc_html($subtitle); ?></strong></p>
-                <div class="partners-icons">
-                    <?php foreach ($partners as $partner) : 
-                        $partner_name = $partner['name'] ?? '';
-                        $partner_logo = $partner['logo'] ?? '';
-                        $partner_url = $partner['url'] ?? '';
-                        
-                        // Construct logo path
-                        $logo_path = get_template_directory_uri() . '/assets/img/partners/' . $partner_logo;
-                        
-                        // Create partner element (with or without link)
-                        $partner_element_start = '';
-                        $partner_element_end = '';
-                        
-                        if (!empty($partner_url)) {
-                            $partner_element_start = '<a href="' . esc_url($partner_url) . '" target="_blank" rel="noopener noreferrer">';
-                            $partner_element_end = '</a>';
-                        }
-                    ?>
-                    <div class="partner-icon">
-                        <?php echo $partner_element_start; ?>
-                        <img src="<?php echo esc_url($logo_path); ?>" alt="<?php echo esc_attr($partner_name); ?>" />
-                        <?php echo $partner_element_end; ?>
+                <div class="partners-icons-wrapper">
+                    <div class="partners-icons partners-scroll">
+                        <?php 
+                        // Display partners twice for seamless infinite scroll
+                        for ($i = 0; $i < 2; $i++) :
+                            foreach ($partners as $partner) : 
+                                $partner_name = $partner['name'] ?? '';
+                                $partner_logo = $partner['logo'] ?? '';
+                                $partner_url = $partner['url'] ?? '';
+                                
+                                // Construct logo path
+                                $logo_path = get_template_directory_uri() . '/assets/img/partners/' . $partner_logo;
+                                
+                                // Create partner element (with or without link)
+                                $partner_element_start = '';
+                                $partner_element_end = '';
+                                
+                                if (!empty($partner_url)) {
+                                    $partner_element_start = '<a href="' . esc_url($partner_url) . '" target="_blank" rel="noopener noreferrer">';
+                                    $partner_element_end = '</a>';
+                                }
+                            ?>
+                            <div class="partner-icon">
+                                <?php echo $partner_element_start; ?>
+                                <img src="<?php echo esc_url($logo_path); ?>" alt="<?php echo esc_attr($partner_name); ?>" />
+                                <?php echo $partner_element_end; ?>
+                            </div>
+                            <?php 
+                            endforeach;
+                        endfor;
+                        ?>
                     </div>
-                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
