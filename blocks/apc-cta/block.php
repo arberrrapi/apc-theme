@@ -16,8 +16,8 @@ function apc_render_cta_block($attributes, $content = '') {
     $next_steps_title = isset($attributes['nextStepsTitle']) ? $attributes['nextStepsTitle'] : 'What happens next?';
     $form_title = isset($attributes['formTitle']) ? $attributes['formTitle'] : 'Partner with APC today';
     $submit_button_text = isset($attributes['submitButtonText']) ? $attributes['submitButtonText'] : 'Submit';
-    $use_gravity_form = isset($attributes['useGravityForm']) ? $attributes['useGravityForm'] : false;
-    $gravity_form_id = isset($attributes['gravityFormId']) ? $attributes['gravityFormId'] : '';
+    $use_gravity_form = isset($attributes['useGravityForm']) ? $attributes['useGravityForm'] : true;
+    $gravity_form_id = isset($attributes['gravityFormId']) ? $attributes['gravityFormId'] : '4';
     
     ob_start();
     ?>

@@ -43,11 +43,11 @@
         },
         "gravityFormId": {
             "type": "string",
-            "default": ""
+            "default": "4"
         },
         "useGravityForm": {
             "type": "boolean",
-            "default": false
+            "default": true
         }
     },
     "editorScript": "file:./block.js",
