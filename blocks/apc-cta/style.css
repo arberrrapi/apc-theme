@@ -470,6 +470,10 @@ select option:first-child {
   box-sizing: border-box;
 }
 
+.gfield select {
+  padding: 15px 40px 15px 15px;
+}
+
 .wp-block-apc-cta .gform_wrapper .gfield input:focus,
 .wp-block-apc-cta .gform_wrapper .gfield select:focus,
 .wp-block-apc-cta .gform_wrapper .gfield textarea:focus {
