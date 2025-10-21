@@ -471,7 +471,7 @@ select option:first-child {
 }
 
 .gfield select {
-  padding: 15px 40px 15px 15px;
+  padding: 15px 40px 15px 15px !important;
 }
 
 .wp-block-apc-cta .gform_wrapper .gfield input:focus,
