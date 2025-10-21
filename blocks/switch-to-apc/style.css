@@ -273,6 +273,7 @@
   .switch-to-apc-header {
     position: static;
     text-align: left;
+    margin-bottom: 50px;
   }
 
   .switch-to-apc-title h1,
