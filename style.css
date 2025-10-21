@@ -2119,7 +2119,7 @@ h1.post-title {
   
 }
 
-.gfield input, select {
+.gfield input, select, textarea {
     background-color: #f4f9ff ;
     border: 1px solid #a3b4c8 ;
     height: 70px;
@@ -2183,8 +2183,8 @@ h3.gsection_title {
 }
 
 .gform_wrapper.gravity-theme .gfield_label{
-  font-size: 24px;
-    font-weight: 400;
+  font-size: 24px !important;
+    font-weight: 400 !important;
 }
 
 .gform-theme-button{
