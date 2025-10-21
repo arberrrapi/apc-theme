@@ -23,7 +23,7 @@
             },
             postsPerPage: {
                 type: 'number',
-                default: 4
+                default: 8
             },
             showControls: {
                 type: 'boolean',

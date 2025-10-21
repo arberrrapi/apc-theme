@@ -71,10 +71,6 @@
   width: fit-content;
 }
 
-.wp-block-apc-testimonials .testimonials-track:hover {
-  animation-play-state: paused;
-}
-
 @keyframes slide {
   0%,
   20% {

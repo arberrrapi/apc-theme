@@ -10,7 +10,7 @@
 function apc_render_resources_block($attributes, $content = '') {
     // Extract attributes with defaults
     $title = isset($attributes['title']) ? $attributes['title'] : 'Latest Resources';
-    $posts_per_page = isset($attributes['postsPerPage']) ? $attributes['postsPerPage'] : 4;
+    $posts_per_page = isset($attributes['postsPerPage']) ? $attributes['postsPerPage'] : 8;
     $show_controls = isset($attributes['showControls']) ? $attributes['showControls'] : true;
     $post_type = isset($attributes['postType']) ? $attributes['postType'] : 'post';
     
@@ -133,6 +133,26 @@ function get_fallback_resources() {
             'title' => 'Complete Guide to Digital Transformation for SMBs',
             'tags' => array('Digital Transformation'),
             'link' => '#digital-transformation'
+        ),
+        array(
+            'title' => 'Disaster Recovery Planning: Why Your Business Needs It',
+            'tags' => array('Disaster Recovery', 'Planning'),
+            'link' => '#disaster-recovery'
+        ),
+        array(
+            'title' => 'Understanding Managed IT Services: A Comprehensive Guide',
+            'tags' => array('Managed IT', 'Services'),
+            'link' => '#managed-it-services'
+        ),
+        array(
+            'title' => 'Network Security Best Practices for Small Businesses',
+            'tags' => array('Network Security', 'Best Practices'),
+            'link' => '#network-security'
+        ),
+        array(
+            'title' => 'The Benefits of Cloud Migration for Growing Companies',
+            'tags' => array('Cloud Migration', 'Benefits'),
+            'link' => '#cloud-migration'
         )
     );
 }

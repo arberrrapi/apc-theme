@@ -35,7 +35,7 @@ get_header(); ?>
     <?php 
     echo apc_render_resources_block(array(
         'title' => get_theme_mod('resources_title', 'Latest Resources'),
-        'postsPerPage' => 4,
+        'postsPerPage' => 8,
         'showControls' => true,
         'postType' => 'post'
     )); 
