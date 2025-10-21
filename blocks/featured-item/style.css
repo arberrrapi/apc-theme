@@ -15,7 +15,7 @@
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(135deg, var(--brand-color, #2119d4), var(--secondary-color, #2119d4));
+    background: linear-gradient(135deg, var(--secondary-color), var(--brand-color));
     border-radius: 27px;
     z-index: -1;
 }

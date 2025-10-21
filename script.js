@@ -538,7 +538,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // ensure desktop mainNav is closed
         if (mainNav) mainNav.classList.remove('mobile-open');
-        document.body.style.overflow = !isOpen ? 'hidden' : '';
+        document.body.classList.toggle('mobile-menu-open', !isOpen);
         return;
       }
 
@@ -547,7 +547,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const isOpen = mainNav.classList.contains('mobile-open');
         hamburgerMenu.classList.toggle('active');
         mainNav.classList.toggle('mobile-open');
-        document.body.style.overflow = !isOpen ? 'hidden' : '';
+        document.body.classList.toggle('mobile-menu-open', !isOpen);
       }
     }
 
@@ -567,7 +567,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ) {
           hamburgerMenu.classList.remove('active');
           mobileNav.classList.remove('open');
-          document.body.style.overflow = '';
+          document.body.classList.remove('mobile-menu-open');
           
           // Clean up drill panels when closing
           if (drillContainer) {
@@ -584,7 +584,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!mainNav.contains(e.target) && !hamburgerMenu.contains(e.target)) {
           hamburgerMenu.classList.remove('active');
           mainNav.classList.remove('mobile-open');
-          document.body.style.overflow = '';
+          document.body.classList.remove('mobile-menu-open');
         }
       }
     });
@@ -631,7 +631,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (window.innerWidth > 768) {
         hamburgerMenu.classList.remove('active');
         mainNav.classList.remove('mobile-open');
-        document.body.style.overflow = '';
+        document.body.classList.remove('mobile-menu-open');
         megaMenuItems.forEach((item) => {
           item.classList.remove('mobile-expanded');
         });
