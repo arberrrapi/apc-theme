@@ -654,6 +654,7 @@ h4 {
   padding: 0;
   z-index: 1002;
   align-items: center;
+  border-radius: 0;
 }
 
 .hamburger-line {

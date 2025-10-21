@@ -75,7 +75,7 @@ It includes all the original functionality with WordPress integration.
     display: block;
     padding: 25px 0;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--text-color);
     text-decoration: none;
     width: 100%;
@@ -90,7 +90,7 @@ It includes all the original functionality with WordPress integration.
     width: 100%;
     padding: 25px 0;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--text-color);
     background: none;
     border: none;
@@ -325,60 +325,98 @@ strong {
     font-weight: 600;
 }
 
-/* Custom Select Dropdown Styles */
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: none;
-  background-repeat: no-repeat;
-  background-position: right 15px center;
-  background-size: 16px;
-  padding-right: 45px;
-  cursor: pointer;
-  position: relative;
-}
-
-select::-ms-expand {
-  display: none;
-}
-
-select:focus {
-  outline: 2px solid var(--brand-color);
-  outline-offset: 2px;
-}
-
-select option {
-  padding: 10px;
-  background: white;
-  color: var(--text-color);
-}
-
-select option:disabled {
-  color: #999;
+/* Generic Button Styles - matching main-btn with hover effects */
+/* Note: Input elements don't support ::before/::after, so this works for button elements and classes */
+button,
+.btn,
+input[type="button"],
+input[type="submit"] {
+  background: linear-gradient(135deg, var(--secondary-color), var(--brand-color));
+  color: white;
+  border: none;
+  padding: 20px 50px;
+  border-radius: 50px;
+  font-size: 24px;
   font-weight: 600;
-  font-style: italic;
-}
-
-/* Select wrapper for Font Awesome icon */
-.select-wrapper {
-  position: relative;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
   display: inline-block;
-  width: 100%;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transform: translateZ(0);
+  will-change: transform, background;
+  --shimmer-x: 50%;
+  --shimmer-y: 50%;
 }
 
-.select-wrapper::after {
-  content: '\f078';
-  font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Pro', 'FontAwesome';
-  font-weight: 900;
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--brand-color);
-  pointer-events: none;
-  font-size: 14px;
+/* Hover effects work on button elements and classes (not input elements due to browser limitations) */
+.page-content button::before,
+.btn::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: radial-gradient(
+    circle 80px at var(--shimmer-x, 50%) var(--shimmer-y, 50%),
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 70%
+  ) !important;
+  transform: scale(0) !important;
+  transition: transform 0.2s ease !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
 }
+
+button:hover::before,
+.btn:hover::before {
+  transform: scale(1) !important;
+}
+
+.page-content button::after,
+.btn::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--brand-color)
+  ) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+  border-radius: 50px !important;
+  z-index: -1 !important;
+}
+
+.gform-body button:hover,
+.gform-body .btn:hover,
+.gform-body input[type="button"]:hover,
+.gform-body input[type="submit"]:hover {
+  color: white;
+}
+
+.gform-body button:hover::after,
+.gform-body .btn:hover::after {
+  opacity: 1 !important;
+}
+
+.gform-body button:active,
+.gform-body .btn:active,
+.gform-body input[type="button"]:active,
+.gform-body input[type="submit"]:active {
+  transform: scale(0.98);
+  transition-duration: 0.1s;
+}
+
+
 
 /* Header Styles */
 .header {
@@ -734,11 +772,13 @@ select option:disabled {
   border: 1px solid white;
   font-size: 18px;
   width: 155px;
+  background: transparent;
 }
 
+
 .mega-menu-image-section .btn:hover {
-  background: var(--secondary-color);
-  transform: translateY(-2px);
+  background: white;
+  color: var(--brand-color);
 }
 
 .mega-menu-column h4 {
@@ -915,7 +955,23 @@ select option:disabled {
   padding: 0;
   z-index: 1002;
   align-items: center;
+  border-radius: 0;
 }
+
+/* Target the element and force the display property to be overridden */
+/* Target the button's parent container and the button itself for max specificity */
+.header-container .hamburger-menu button::before,
+.header-container .hamburger-menu button::after {
+    display: none !important;
+}
+
+/* Also try the selector that works for the AFTER element, just in case */
+.hamburger-menu button::before {
+    display: none !important;
+}
+
+
+
 
 .hamburger-line {
   width: 30px;
@@ -1872,9 +1928,11 @@ select option:disabled {
   );
   border-radius: 25px;
   padding: 40px;
+  margin-bottom: 50px;
 }
 
 .page-header h1{
+  margin-top: 160px;
   font-size: 96px;
   color: white;
   font-weight: 300;
@@ -1887,9 +1945,6 @@ select option:disabled {
   margin: 10px 0 0 0;
 }
 
-.page-button-wrapper {
-  margin-bottom: 160px;
-}
 
 .page-header-button {
   display: inline-block;
@@ -1929,6 +1984,7 @@ select option:disabled {
 @media (max-width: 768px) {
   .page-header h1 {
     font-size: 48px;
+    margin-top: 150px;
   }
   
   .page-subtitle {
@@ -1936,9 +1992,7 @@ select option:disabled {
     margin: 8px 0 0 0;
   }
   
-  .page-button-wrapper {
-    margin-bottom: 150px;
-  }
+ 
   
   .page-header-button {
     padding: 10px 20px;
@@ -1949,9 +2003,11 @@ select option:disabled {
 @media (max-width: 480px) {
   .page-header{
     padding: 20px;
+    margin-bottom: 40px;
   }
   .page-header h1 {
     font-size: 36px;
+    margin-top: 100px;
   }
   
   .page-subtitle {
@@ -1959,9 +2015,7 @@ select option:disabled {
     margin: 5px 0 0 0;
   }
   
-  .page-button-wrapper {
-    margin-bottom: 100px;
-  }
+
   
   .page-header-button {
     padding: 8px 16px;
@@ -2065,3 +2119,85 @@ h1.post-title {
   
 }
 
+.gfield input, select {
+    background-color: #f4f9ff ;
+    border: 1px solid #a3b4c8 ;
+    height: 70px;
+    font-size: 24px !important;
+    border-radius: 25px;
+    padding-left: 20px !important;
+}
+
+.gform_wrapper.gravity-theme .gform_fields{
+  grid-row-gap: 46px !important;
+}
+
+.gform-field-label, .gfield_label {
+    margin-bottom: 10px !important;
+    padding-left: 15px !important;
+}
+
+.ginput_right:has(select)::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Pro', 'FontAwesome';
+  font-weight: 900;
+  position: absolute;
+  right: 28px;
+    top: 66%;
+  transform: translateY(-50%);
+  color: var(--brand-color);
+  pointer-events: none;
+  font-size: 18px;
+} 
+
+.ginput_container span {
+  position: relative;
+}
+
+select {
+  /* Hide the default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Hide the default arrow for IE 10+ */
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.gform_wrapper.gravity-theme .gf_progressbar_percentage.percentbar_blue{
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 0%,
+    var(--brand-color) 100%
+  );
+}
+
+h3.gsection_title {
+    margin: 20px 0px;
+}
+
+.gf_progressbar.gf_progressbar_blue {
+    margin-bottom: 50px !important;
+}
+
+.gform_wrapper.gravity-theme .gfield_label{
+  font-size: 24px;
+    font-weight: 400;
+}
+
+.gform-theme-button{
+  padding: 30px;
+  margin: 50px 0;
+}
+
+/* Target the SELECT parent element when it 'has' the placeholder option selected */
+.ginput_container_select select:has(option.gf_placeholder:checked) {
+    color: #999 !important; /* Force the gray placeholder color */
+}
+
+/* Ensure the color reverts to dark when a non-placeholder option is selected */
+.ginput_container_select select:not(:has(option.gf_placeholder:checked)) {
+    color: #333 !important; /* Force the dark text color for real selections */
+}

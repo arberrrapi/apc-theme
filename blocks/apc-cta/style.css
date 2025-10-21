@@ -172,9 +172,13 @@
   flex-direction: column;
 }
 
- input,
- select,
-textarea {
+/* Input, select, and textarea styles - scoped to APC CTA block */
+.wp-block-apc-cta input,
+.wp-block-apc-cta select,
+.wp-block-apc-cta textarea,
+.cta-form input,
+.cta-form select,
+.cta-form textarea {
   padding: 15px;
   border: 1px solid var(--grey);
   border-radius: 8px;
@@ -185,20 +189,27 @@ textarea {
   height: 100px;
 }
 
- input:focus,
- select:focus,
-textarea:focus {
+.wp-block-apc-cta input:focus,
+.wp-block-apc-cta select:focus,
+.wp-block-apc-cta textarea:focus,
+.cta-form input:focus,
+.cta-form select:focus,
+.cta-form textarea:focus {
   outline: none;
   border-color: var(--brand-color);
   box-shadow: 0 0 0 3px rgba(112, 85, 238, 0.1);
 }
 
- input::placeholder,
- textarea::placeholder {
+.wp-block-apc-cta input::placeholder,
+.wp-block-apc-cta textarea::placeholder,
+.cta-form input::placeholder,
+.cta-form textarea::placeholder {
   color: #999;
 }
 
- select {
+/* Custom Select Dropdown Styles - scoped to APC CTA block */
+.wp-block-apc-cta select,
+.cta-form select {
   cursor: pointer;
   color: #333;
   appearance: none;
@@ -212,8 +223,34 @@ textarea:focus {
   position: relative;
 }
 
-select::-ms-expand {
+.wp-block-apc-cta select::-ms-expand,
+.cta-form select::-ms-expand {
   display: none;
+}
+
+.wp-block-apc-cta select:focus,
+.cta-form select:focus {
+  outline: 2px solid var(--brand-color);
+  outline-offset: 2px;
+}
+
+.wp-block-apc-cta select option,
+.cta-form select option {
+  padding: 10px;
+  background: white;
+  color: var(--text-color);
+}
+
+.wp-block-apc-cta select option:disabled,
+.cta-form select option:disabled {
+  color: #999;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.wp-block-apc-cta select option:first-child,
+.cta-form select option:first-child {
+  color: #999;
 }
 
 /* Add Font Awesome arrow to select fields in forms */
@@ -239,11 +276,9 @@ select::-ms-expand {
   display: none;
 }
 
-select option:first-child {
-  color: #999;
-}
-
- textarea {
+/* Textarea specific styles - scoped to APC CTA block */
+.wp-block-apc-cta textarea,
+.cta-form textarea {
   resize: vertical;
   min-height: 100px;
 }
@@ -361,6 +396,7 @@ select option:first-child {
   }
   .gform_wrapper.gravity-theme input:not([type=radio]):not([type=checkbox]):not([type=image]):not([type=file]), select {
     height: 75px;
+    line-height: normal !important;
   }
 
   .wp-block-apc-cta .next-step-item {
@@ -433,7 +469,9 @@ select option:first-child {
   position: relative;
 }
 
-.wp-block-apc-cta .gform_wrapper .gfield:has(select)::after {
+
+
+ .wp-block-apc-cta .gform_wrapper  .gfield:has(select)::after {
   content: '\f078';
   font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Pro', 'FontAwesome';
   font-weight: 900;
@@ -579,4 +617,22 @@ transform: translateZ(0px);
     padding: 15px;
     font-size: 18px;
   }
+}
+
+.cta-form .gfield input, select {
+  background-color: white;
+    border: 1px solid var(--grey);
+    height: 100px;
+    font-size: 24px !important;
+    border-radius: 25px;
+    padding-left: 20px !important;
+}
+
+.cta-form .gform_wrapper.gravity-theme .gform_fields{
+  grid-row-gap: 16px !important;
+}
+
+.cta-form .gform-field-label, .gfield_label {
+    margin-bottom: 10px !important;
+    padding-left: 15px !important;
 }
