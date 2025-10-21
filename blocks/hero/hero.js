@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
     face.style.transition = 'none';
   });
 
+  // Mark icon groups as initialized (removes default CSS visibility)
+  iconGroups.forEach((group) => {
+    group.classList.add('hero-icons-initialized');
+  });
+
   // Set initial positions
   faces[0].classList.add('active');
   for (let i = 1; i < faces.length; i++) {
